@@ -15,13 +15,19 @@
 			name = "dragora";
 			isDefault = true;
 			extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+				#VERY IMPORTANT
+				omnisearch
 				ublock-origin
-				darkreader
-				firefox-color
-				censor-tracker
 				sponsorblock
+				darkreader
 				vimium-c
+				censor-tracker
+
+				# MISC
+				tabcenter-reborn
+				firefox-color
 				stylus
+				translate-web-pages
 			];
 		};
 		policies = {

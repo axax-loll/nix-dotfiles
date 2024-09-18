@@ -1,7 +1,7 @@
 {
 	imports = [
 		./colors.nix
-		./mouse.nix
+		# ./mouse.nix
 		# ./config.nix
 		./layout.nix
 		./nav-bar.nix
