@@ -86,7 +86,7 @@
 		   *  possible values:
 		   *  0 – toolbar on top
 		   *  4 – toolbar on bottom
-		   */ --uc-toolbar-position: 0;
+		   */ --uc-toolbar-position: 4;
 		
 		}
 		
