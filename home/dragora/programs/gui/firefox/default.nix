@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 {
-	imports = [ ./settings.nix ./search.nix ./userchrome.nix ./startpage.nix ];
+	imports = [ ./settings.nix ./search.nix  ];
 	programs.firefox = {
 		enable = true;
 		languagePacks = [ "ru" ];
