@@ -1,6 +1,12 @@
 { pkgs, inputs, ... }:
 {
-	imports = [ ./settings.nix ./search.nix ./userchrome.nix ];
+	imports = [
+		./cascade
+		
+		./settings.nix
+		./search.nix
+		./userchrome.nix
+	];
 	programs.firefox = {
 		enable = true;
 		languagePacks = [ "ru" ];
