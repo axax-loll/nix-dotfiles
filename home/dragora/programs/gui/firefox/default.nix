@@ -1,0 +1,55 @@
+{ pkgs, inputs, ... }:
+{
+	imports = [ ./settings.nix ./search.nix ./userchrome.nix ./startpage.nix ];
+	programs.firefox = {
+		enable = true;
+		languagePacks = [ "ru" ];
+		profiles.dragora = {
+			id = 0;
+			name = "dragora";
+			isDefault = true;
+			extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+				ublock-origin
+				darkreader
+				firefox-color
+				censor-tracker
+				sponsorblock
+				vimium-c
+				stylus
+			];
+		};
+		policies = {
+			CaptivePortal = false;
+			DisableFirefoxStudies = true;
+			DisablePocket = true;
+			DisableTelemetry = true;
+			# DisableFirefoxAccounts = true;
+			DisableFormHistory = true;
+			DisplayBookmarksToolbar = false;
+			DontCheckDefaultBrowser = true;
+			DisableProfileRefresh = true;
+			PromptForDownloadLocation = false;
+			NetworkPrediction = false;
+			showSearchBar = false;
+			DisableSetDesktopBackground = true;
+			LegacyProfiles = true;
+			ManualAppUpdateOnly = true;
+			DisableFirefoxScreenshots = true;
+			HardwareAcceleration = true;
+			FirefoxHome = {
+			  Pocket = false;
+			  Snippets = false;
+			};
+			SanitizeOnShutdown = {
+			  Cache = true;
+			  History = false;
+			  Cookies = false;
+			  Downloads = true;
+			  FormData = true;
+			  Sessions = true;
+			  OfflineApps = true;
+			};
+			PasswordManagerEnabled = true;
+		};
+	};
+}

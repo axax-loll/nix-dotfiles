@@ -1,0 +1,29 @@
+{ ... }:
+{
+	programs.firefox.profiles.dragora.userChrome = ''
+		* {
+			font-family: "JetBrainsMono Nerd Font" !important;
+			font-size: 12pt !important; 
+		}
+	'';
+	programs.firefox.profiles.dragora.userContent = ''
+		@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+			.click-target-container *, .top-sites-list * {
+				color: #fff !important ;
+				text-shadow: 2px 2px 2px #222 !important ;
+			}
+			body::before {
+				content: "" ;
+				z-index: -1 ;
+				position: fixed ;
+				top: 0 ;
+				left: 0 ;
+				background: #f9a no-repeat url(img/wall.jpg) center ;
+				background-size: cover ;
+				width: 100vw ;
+				height: 100vh ;
+			}
+			.logo { background-image: url(img/logo.png) !important; }
+		}
+	'';
+}
