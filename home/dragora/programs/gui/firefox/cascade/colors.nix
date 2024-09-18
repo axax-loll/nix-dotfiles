@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
 	programs.firefox.profiles.dragora.userChrome = with config.lib.stylix.colors; ''
 		/*---+---+---+---+---+---+---+

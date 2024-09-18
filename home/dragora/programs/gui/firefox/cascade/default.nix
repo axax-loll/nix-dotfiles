@@ -2,7 +2,7 @@
 	imports = [
 		./colors.nix
 		./mouse.nix
-		./config.nix
+		# ./config.nix
 		./layout.nix
 		./nav-bar.nix
 		./responsive.nix

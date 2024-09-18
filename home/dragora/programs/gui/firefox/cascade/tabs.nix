@@ -8,7 +8,7 @@
 		
 		
 		/* Hides the list-all-tabs button*/
-		#alltabs-button { display: var(--uc-show-all-tabs-button) !important; }
+		/* #alltabs-button { display: var(--uc-show-all-tabs-button) !important; } */
 		
 		
 		/* remove tab shadow */
