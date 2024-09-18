@@ -7,5 +7,7 @@
 		./nav-bar.nix
 		./responsive.nix
 		./tabs.nix
+		
+		./tabcenter.nix
 	];
 }

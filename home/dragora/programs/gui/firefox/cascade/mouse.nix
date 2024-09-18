@@ -73,14 +73,20 @@
 		  /*  Width of the URL Bar for the Oneline layout
 		   *  If enabled the max-width is applied on focus
 		   *  otherwise the URL Bar will always be it's min-width
-		   */ --uc-urlbar-min-width: 35vw;
-		      --uc-urlbar-max-width: 35vw;
+		   */ --uc-urlbar-min-width: 0vw;
+		      --uc-urlbar-max-width: 100vw;
 		
 		  /*  Position of the URL Bar
 		   *  possible values:
 		   *  1 – tabs on the right
 		   *  3 – tabs on the left
 		   */ --uc-urlbar-position: 1;
+		   
+		  /*  Position of the Personal Toolbar
+		   *  possible values:
+		   *  0 – toolbar on top
+		   *  4 – toolbar on bottom
+		   */ --uc-toolbar-position: 0;
 		
 		}
 		
@@ -141,7 +147,7 @@
 		   *  possible values:
 		   *  show: -moz-inline-block
 		   *  hide: none
-		   */ --show-tab-close-button-hover: -moz-inline-block;
+		   */ --show-tab-close-button-hover: none;
 		
 		
 		  /*  Left and Right "dip" of the container indicator

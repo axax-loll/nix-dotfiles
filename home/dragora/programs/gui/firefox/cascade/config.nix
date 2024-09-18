@@ -72,8 +72,8 @@
 		  /*  Width of the URL Bar for the Oneline layout
 		   *  If enabled the max-width is applied on focus
 		   *  otherwise the URL Bar will always be it's min-width
-		   */ --uc-urlbar-min-width: 35vw;
-		      --uc-urlbar-max-width: 35vw;
+		   */ --uc-urlbar-min-width: 0vw;
+		      --uc-urlbar-max-width: 100vw;
 		
 		  /*  Position of the URL Bar
 		   *  possible values:
