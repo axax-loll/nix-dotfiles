@@ -1,7 +1,7 @@
 { pkgs, config, lib, ...}:
 {
 	services.mako = with config.lib.stylix.colors; {
-		enable = true;
+		enable = false;
 		icons = true;
 		anchor = "top-right";
 		backgroundColor = lib.mkForce "#${base01}";

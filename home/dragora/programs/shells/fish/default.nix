@@ -8,14 +8,18 @@
 			c = "clear";
 			x = "exit";
 			
-			hsw = "home-manager switch --flake ~/.flake/.#azikx";
-			nsw = "doas nixos-rebuild switch --flake ~/.flake/.#karbur";
-			ngd = "nix-collect-garbage -d";
-			ngD = "doas nix-collect-garbage -d";
+			nhs = "nh home switch";
+			nos = "nh os switch";
+			nca = "nh clean all";
 			
-			ls = "eza --icons=always";
-			lsl = "eza --icons=always -l";
-			ls1 = "eza --icons=always -1";
+			ls = "eza --icons=always --group-directories-first";
+			lsl = "eza --icons=always -l --group-directories-first";
+			lst = "eza --icons=always -T --group-directories-first";
+			
+			ls1 = "eza --icons=always -1 --group-directories-first";
+			ls11 = "eza --icons=never -1 --group-directories-first";
+			lsd = "eza --icons=never -D1 --group-directories-first";
+			lsf = "eza --icons=never -f1 --group-directories-first";
 			
 			cat = "bat --theme base16";
 			
@@ -23,13 +27,20 @@
 			y = "yazi";
 			
 			m = "micro";
-			v = "neovim";
+			v = "nvim";
 			h = "helix";
 			
 			ff = "fastfetch";
 			ca = "cava";
 			pm = "pulsemixer";
 			bt = "bluetuith";
+
+			gc = "git clone";
+			ga = "git add .";
+			go = "git commit -m";
+			gO = "git commit -m update";
+			gp = "git push";
+			gl = "git pull";
 			
 			lut = "lutgen apply -p catppuccin-macchiato";
 			icat = "kitten icat";

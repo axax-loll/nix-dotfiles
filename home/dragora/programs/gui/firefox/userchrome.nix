@@ -21,12 +21,18 @@ in
 				position: fixed ;
 				top: 0 ;
 				left: 0 ;
-				background: #f9a no-repeat url("${repo}/synth.png?raw=true") center ;
+				background: #0F0F0F no-repeat url("${repo}/synth.png?raw=true") center ;
 				background-size: cover ;
 				width: 100vw ;
 				height: 100vh ;
 			}
 			.logo { background-image: url("${repo}/logo.png?raw=true") !important; }
+			.search-wrapper input { background: #0F0F0F !important; }
+			#PlacesToolbarItems {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
 		}
 	'';
 }
