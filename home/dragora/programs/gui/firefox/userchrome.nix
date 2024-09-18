@@ -1,4 +1,7 @@
 { ... }:
+let
+	repo = "https://github.com/axax-loll/fuji-wallpapers/blob/main";
+in
 {
 	programs.firefox.profiles.dragora.userChrome = ''
 		* {
@@ -18,12 +21,12 @@
 				position: fixed ;
 				top: 0 ;
 				left: 0 ;
-				background: #f9a no-repeat url(img/wall.jpg) center ;
+				background: #f9a no-repeat url("${repo}/synth.png?raw=true") center ;
 				background-size: cover ;
 				width: 100vw ;
 				height: 100vh ;
 			}
-			.logo { background-image: url(img/logo.png) !important; }
+			.logo { background-image: url("${repo}/logo.png?raw=true") !important; }
 		}
 	'';
 }
