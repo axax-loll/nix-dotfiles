@@ -10,7 +10,7 @@
 		
 		  /*  Global Border Radius
 		   *  applied to ALL UI elements
-		   */ --uc-border-radius: 0px;
+		   */ --uc-border-radius: 6px;
 		
 		
 		  /*  The distance the Statuspanel floats
@@ -92,8 +92,8 @@
 		
 		
 		/* Disable the Navigation Buttons */
-		/* #back-button,
-		#forward-button { display: none !important; } */
+		#back-button,
+		#forward-button { display: none !important; }
 		
 		/* Disables the Tracking Protection Shield */
 		/* #tracking-protection-icon-container { display: none !important; } */
@@ -118,9 +118,6 @@
 		/* #unified-extensions-button { display: none !important; } */
 		
 		
-		#alltabs-button { margin-top: 5px !important; }
-		
-		
 		
 		
 		
@@ -133,8 +130,8 @@
 		
 		  /*  Allow tabs to have dynamic widths based on
 		   *  the Tab Bars maximum width
-		   */ --uc-active-tab-width:   clamp(100px, 30vw, 300px);
-		      --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
+		   */ --uc-active-tab-width:   clamp(100px, 30vw, 270px);
+		      --uc-inactive-tab-width: clamp(100px, 20vw, 160px);
 		
 		
 		  /*  Enable this to always show the Tab Close button
