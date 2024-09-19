@@ -25,6 +25,7 @@
 				censor-tracker
 
 				# MISC
+				tabcenter-reborn
 				firefox-color
 				stylus
 				translate-web-pages
