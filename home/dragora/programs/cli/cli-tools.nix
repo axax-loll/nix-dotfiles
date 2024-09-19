@@ -5,7 +5,6 @@
 		joshuto
 		
 		bat
-		eza
 		
 		git
 		cava
