@@ -7,7 +7,7 @@ let
 in
 {
 	stylix = {
-		image = ../walls/paradise.png;
+		image = ../walls/car.png;
 		base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 	};
 }
