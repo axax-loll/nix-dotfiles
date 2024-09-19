@@ -6,6 +6,9 @@
 		autoEnable = false;
 		targets = {
 			console.enable = true;
+			nixos-icons.enable = true;
+			chromium.enable = true;
+			fish.enable = true;
 		};
 	};
 }
