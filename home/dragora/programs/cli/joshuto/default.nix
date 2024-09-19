@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+	imports = [ ./theme.nix ];
 	programs.joshuto = {
 		enable = true;
 		settings = {
