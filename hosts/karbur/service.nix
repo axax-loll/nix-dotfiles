@@ -17,5 +17,6 @@
 			enable = true;
 			useRoutingFeatures = "both";
 		};
+		gvfs.enable = true;
 	};
 }
