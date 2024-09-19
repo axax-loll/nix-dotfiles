@@ -7,5 +7,6 @@
 		./git.nix
 		
 		./helix
+		./joshuto
 	];
 }
