@@ -1,5 +1,6 @@
 { pkgs, inputs, ... }:
 {
+	# ANOTHER LAUNCHER LIKE SPOTLIGHT
 	programs.anyrun = {
 		enable = true;
 		config = {
