@@ -62,18 +62,22 @@
 			"$m $s, V, exec, vesktop"
 			
 			"$m, B, exec, firefox"
-			"$m $s, B, exec, vivaldi --ozone-platform=wayland"
+			"$m $s, B, exec, chromium"
 			
 			"$m, N, exec, kitty -T Explorer joshuto"
 			"$m $s, N, exec, kitty --class=tfm -T Explorer joshuto"
 			"$m $a, N, exec, nemo"
 			
 			"$m, M, exec, spotify"
+			"$m $s, M, exec, obsidian"
 			
 			"$m, A, exec, kitty --class=anicliru -T Anime anicli-ru -q 1080"
 			
 			"$m, Z, exec, kitty --class=miniprogs -T Sound pulsemixer --no-mouse"
 			"$m $s, Z, exec, kitty --class=miniprogs -T Bluetooth bluetuith"
+			
+			"$m, X, exec, bottles"
+			"$m $s, X, exec, prismlauncher"
 
 			"$m, $d, exec, playerctl play-pause"
 			"$m $s, $d, exec, playerctl stop"
@@ -84,18 +88,10 @@
 			"$s, $p, exec, grimblast copysave output $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 			"$a, $p, exec, grimblast copysave active $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 		]
-		++ (
-			builtins.concatLists (builtins.genList 
-				(i:
-					let
-						ws = i + 1;
-					in [
-						"$mod, code:1${toString i}, workspace, ${toString ws}"
-						"$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-					]
-				) 
-			9)
-		);
+		++ ( builtins.concatLists (builtins.genList (i: let ws = i + 1; in [
+				"$mod, code:1${toString i}, workspace, ${toString ws}"
+				"$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+			] ) 9) );
 
 		# HOLDING BUTTONS
 		binde = [

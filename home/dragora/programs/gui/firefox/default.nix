@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 {
 	imports = [
-		# ./cascade
-		
 		./settings.nix
 		./search.nix
 		./userchrome.nix

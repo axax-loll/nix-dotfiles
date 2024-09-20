@@ -35,14 +35,16 @@
 			pm = "pulsemixer";
 			bt = "bluetuith";
 
-			gc = "git clone";
+			gl = "git clone";
 			ga = "git add .";
-			go = "git commit -m";
-			gO = "git commit -m update";
+			gA = "git add";
+			gc = "git commit -m";
+			gC = "git commit -m update  ";
 			gp = "git push";
-			gl = "git pull";
+			gP = "git pull";
 			
-			lut = "lutgen apply -p catppuccin-macchiato";
+			lut = "lutgen apply -p mountain-fuji";
+			lutall = "lutgen apply -p mountain-fuji ./*";
 			icat = "kitten icat";
 		};
 		interactiveShellInit = ''

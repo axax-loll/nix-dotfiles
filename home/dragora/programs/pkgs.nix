@@ -2,8 +2,7 @@
 {
 	home.packages = with pkgs; [
 		home-manager
-
-		vivaldi
+		
 		# spotify
 		vesktop
 		

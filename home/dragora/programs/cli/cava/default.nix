@@ -4,10 +4,10 @@
 		enable = true;
 		settings = {
 			general = {
-				framerate = 24;
-				bars = 0;
-				bar_width = 1;
-				bar_spacing = 1;
+				# framerate = 24;
+				# bars = 0;
+				# bar_width = 1;
+				# bar_spacing = 1;
 			};
 			color = with config.lib.stylix.colors; {
 				gradient = 1;
@@ -17,7 +17,6 @@
 				gradient_color_4 = "'#${base0B}'";
 				gradient_color_5 = "'#${base0A}'";
 				gradient_color_6 = "'#${base09}'";
-				gradient_color_7 = "'#${base08}'";
 			};
 		};
 	};
