@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+	# NIX HELPER
 	programs.nh = {
 		enable = true;
 		clean.enable = true;

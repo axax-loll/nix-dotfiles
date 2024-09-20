@@ -1,5 +1,6 @@
 { lib, ... }: 
 {
+	# NETWORKING
 	networking = {
 		hostName = "karbur";
 		networkmanager = {

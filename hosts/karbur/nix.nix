@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+	# NIX SETTINGS
 	nix = {
 		settings = {
 			experimental-features = [ "nix-command" "flakes" ];
@@ -13,6 +14,8 @@
 			];
 		};
 	};
+	
+	# NIXPKGS SETTINGS
 	nixpkgs.config = {
 		allowBroken = true;
 		allowUnfree = true;

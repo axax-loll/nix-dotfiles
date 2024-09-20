@@ -1,5 +1,6 @@
 { pkgs, ...}: 
 {
+	# LOCALE AND TIME SETTINGS
 	time.timeZone = "Asia/Chita";
 	i18n = {
 		defaultLocale = "en_US.UTF-8";

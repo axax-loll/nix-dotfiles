@@ -1,5 +1,6 @@
 { config, pkgs, inputs, lib, ... }:
 {
+	# OS PACKAGES
 	nixpkgs = { hostPlatform = lib.mkDefault "x86_64-linux"; };
 	environment.systemPackages = with pkgs; [
 		nh

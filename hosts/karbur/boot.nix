@@ -1,5 +1,6 @@
 { pkgs, chaotic, ... }:
 {
+	# BOOT PARAMETERS
 	boot = {
 		kernelPackages = pkgs.linuxPackages_cachyos;
 		kernelModules = [ "kvm-amd" ];
