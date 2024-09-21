@@ -13,6 +13,10 @@
     			variant = "qwerty";
     			options = "grp:caps_toggle";
 			};
+			displayManager.gdm = {
+				enable = true;
+				wayland = true;
+			};
 		};
 		tailscale = {
 			enable = true;

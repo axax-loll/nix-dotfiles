@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 	# SYSTEM COLORSCHEME (see targets)
-	imports = [ ./paradise.nix ]; # SYNC WITH HOME MANAGER THEME
+	imports = [ inputs.stylix.nixosModules.stylix ./paradise.nix ]; # SYNC WITH HOME MANAGER THEME
 	stylix = {
 		enable = true;
 		autoEnable = false;

@@ -2,7 +2,7 @@
 	imports = [
 		./boot.nix
 		./disks.nix
-		./doas.nix
+		./security.nix
 		./hardware.nix
 		./locale.nix
 		./network.nix
