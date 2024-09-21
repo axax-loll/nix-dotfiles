@@ -10,8 +10,8 @@
 		nur.url = "github:nix-community/NUR";
 		
 		# ONE LINE SOFTWARE
-		zen-browser.url = "github:MarceColl/zen-browser-flake";
-		hyprland.url = "github:hyprwm/hyprland";
+		hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		stylix.url = "github:danth/stylix";
 		
 		# TWO LINE SOFTWARE
@@ -35,9 +35,13 @@
 			url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		# Hyprspace = {
+		# 	url = "github:KZDKM/Hyprspace";
+		# 	inputs.hyprland.follows = "hyprland";
+		# };
 	};
 
-	outputs = { self, nixpkgs, chaotic, nur, home-manager, stylix, nixvim, anyrun, spicetify-nix, ... }@inputs:
+	outputs = { self, nixpkgs, chaotic, nur, nixos-hardware, home-manager, stylix, nixvim, anyrun, spicetify-nix, ... }@inputs:
 	{
 		# PC IN MY ROOM
 		nixosConfigurations.karbur = nixpkgs.lib.nixosSystem {
@@ -64,6 +68,28 @@
 				nur.hmModules.nur
 			];
 		};
+
 		# FUCKING THINKPAD T14 GEN1 OH MY GOOOOD (where?)
+		nixosConfigurations.wysvort = nixpkgs.lib.nixosSystem {
+			system = "x86_64-linux";
+			specialArgs = { inherit inputs; };
+			modules = [
+				./hosts/wysvort
+				home-manager.nixosModules.home-manager
+				chaotic.nixosModules.default
+				stylix.nixosModules.stylix
+				nur.nixosModules.nur
+			];
+		};
+		homeConfigurations.megamozg = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.x86_64-linux;
+			extraSpecialArgs = { inherit inputs spicetify-nix; };
+			modules = [
+				./home/megamozg
+				spicetify-nix.homeManagerModules.default
+				chaotic.homeManagerModules.default
+				stylix.homeManagerModules.stylix
+			];
+		};
 	};
 }
