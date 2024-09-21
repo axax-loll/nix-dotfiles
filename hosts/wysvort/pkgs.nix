@@ -9,7 +9,6 @@
 		fish
 		doas
 		micro
-		neovim
 		zapret
 		hyprland
 		home-manager
