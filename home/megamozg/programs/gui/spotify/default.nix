@@ -1,8 +1,9 @@
-{ pkgs, config, spicetify-nix, ... }:
+{ pkgs, config, spicetify-nix, inputs, ... }:
 let
 	spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
+	imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 	programs.spicetify = {
 		enable = true;
 		theme = spicePkgs.themes.sleek;

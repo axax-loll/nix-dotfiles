@@ -41,7 +41,7 @@
 			DisableProfileRefresh = true;
 			PromptForDownloadLocation = false;
 			NetworkPrediction = false;
-			showSearchBar = false;
+			showSearchBar = true;
 			DisableSetDesktopBackground = true;
 			LegacyProfiles = true;
 			ManualAppUpdateOnly = true;

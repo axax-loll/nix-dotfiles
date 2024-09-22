@@ -72,8 +72,8 @@
 		  /*  Width of the URL Bar for the Oneline layout
 		   *  If enabled the max-width is applied on focus
 		   *  otherwise the URL Bar will always be it's min-width
-		   */ --uc-urlbar-min-width: 35vw;
-		      --uc-urlbar-max-width: 35vw;
+		   */ --uc-urlbar-min-width: 0vw;
+		      --uc-urlbar-max-width: 100vw;
 		
 		  /*  Position of the URL Bar
 		   *  possible values:
@@ -109,7 +109,7 @@
 		#urlbar-go-button { display: none !important; }
 		
 		/* Hides the Extensions Menu Icon */
-		#unified-extensions-button { display: none !important; }
+		#unified-extensions-button { display: -moz-inline-block !important; }
 		
 		
 		
@@ -162,7 +162,5 @@
 		/* Hide the secondary Tab Label
 		 * e.g. playing indicator (the text, not the icon) */
 		.tab-secondary-label { display: none !important; }
-
-		#statuspanel #statuspanel-label { margin: 0 0 var(--uc-status-panel-spacing) var(--uc-status-panel-spacing) !important; }
 	'';
 }

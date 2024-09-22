@@ -14,13 +14,16 @@
 				}
 			];
 		};
-		fprintd = {
-			enable = true;
-			package = pkgs.fprintd-tod;
-			tod = {
-				enable = true;
-				package = pkgs.libfprint-2-tod1-vfs0090;
+		pam = {
+			services = {
+				swaylock.fprintAuth = true;
+				regreet.fprintAuth = true;
+				greetd = {
+					fprintAuth = true;
+					enableGnomeKeyring = true;
+				};
 			};
 		};
+		polkit.enable = true;
 	};
 }

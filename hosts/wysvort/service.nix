@@ -14,7 +14,7 @@
     			options = "grp:caps_toggle";
 			};
 			displayManager.gdm = {
-				enable = true;
+				enable = false;
 				wayland = true;
 			};
 		};
@@ -40,10 +40,29 @@
 				processScheduler.pipewireBoost.enable = true;
 			};
 		};
+		fprintd = {
+			enable = true;
+			package = pkgs.fprintd-tod;
+			tod = {
+				enable = true;
+				driver = pkgs.libfprint-2-tod1-vfs0090;
+			};
+		};
+		greetd = {
+			enable = true;
+			package = pkgs.greetd.regreet;
+			settings = {
+				default_session = {
+					command = "cage -s regreet";
+					user = "megamozg";
+				};
+			};
+		};
 
 		# SIMPLE SERVICES
 		dbus.implementation = "broker";
 		upower.enable = true;
+		cage.enable = true;
 		thermald.enable = true;
 		# thinkfan.enable = true;
 		gvfs.enable = true;

@@ -1,6 +1,6 @@
 {
 	imports = [
-		./user
+		./cascade
 		
 		./chrome.nix
 		./content.nix

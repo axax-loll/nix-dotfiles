@@ -24,6 +24,8 @@
 
 		swayimg
 		anime4k
+
+		bottles
 		
 		(nerdfonts.override {
 			fonts = [

@@ -28,7 +28,7 @@
 			
 			m = "micro";
 			v = "nvim";
-			h = "helix";
+			h = "hx";
 			
 			ff = "fastfetch";
 			ca = "cava";
@@ -49,7 +49,6 @@
 		};
 		interactiveShellInit = ''
 			set fish_greeting
-			[ "$(tty)" = /dev/tty1 ] && exec Hyprland
 		'';
 	};
 }
