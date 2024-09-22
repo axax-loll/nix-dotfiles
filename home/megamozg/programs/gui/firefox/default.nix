@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }:
 {
 	imports = [
+		./user
+		
 		./settings.nix
 		./search.nix
-		./userchrome.nix
-		./waterfall.nix
 	];
 	programs.firefox = {
 		enable = true;
