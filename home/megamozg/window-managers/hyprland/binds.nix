@@ -20,13 +20,14 @@
 		bindm = [
 			"$m, mouse:272, movewindow"
 			"$m, mouse:273, resizewindow"
-			"$m $s, mouse:273, resizewindow 1"
+			"$m  $s, mouse:273, resizewindow 1"
 		];
 
 		# KEYBOARD
 		bind = [
 			# BUILTIN COMMANDS
 			"$m, $sp, togglefloating"
+			"$m  $s, $sp, overview:toggle"
 			"$m, Q, killactive"
 			"$m, C, centerwindow"
 			"$m, F, fullscreen"
@@ -34,17 +35,17 @@
 			"$m, P, pin"
 			
 			"$m, O, cyclenext"
-			"$m $s, O, swapnext "
+			"$m  $s, O, swapnext "
 			
 			"$m, G, togglegroup"
-			"$m $s, G, changegroupactive"
-			"$m $a, G, moveoutofgroup"
+			"$m  $s, G, changegroupactive"
+			"$m  $a, G, moveoutofgroup"
 			
 			"$m, D, togglespecialworkspace, extra"
-			"$m $s, D, movetoworkspace, special:extra"
+			"$m  $s, D, movetoworkspace, special:extra"
 			
 			"$m, S, togglespecialworkspace, magic"
-			"$m $s, S, movetoworkspace, special:magic"
+			"$m  $s, S, movetoworkspace, special:magic"
 
 			"$m, $md, workspace, e+1"
 			"$m, $mu, workspace, e-1"
@@ -54,37 +55,37 @@
 			
 			# PROGRAMS
 			"$m, $rt, exec, kitty -T Terminal"
-			"$m $s, $rt, exec, kitty --class=termfloat -T Terminal"
+			"$m  $s, $rt, exec, kitty --class=termfloat -T Terminal"
 			
 			"$m, $t, exec, nwg-drawer -ovl -nocats -nofs -d -c 7 -mb -49"
-			"$m $s, $t, exec, anyrun"
+			"$m  $s, $t, exec, anyrun"
 			
 			"$m, V, exec, ayugram-desktop"
-			"$m $s, V, exec, vesktop"
+			"$m  $s, V, exec, vesktop"
 			
 			"$m, B, exec, firefox"
-			"$m $s, B, exec, chromium"
+			"$m  $s, B, exec, chromium"
 			
 			"$m, N, exec, kitty -T Explorer joshuto"
-			"$m $s, N, exec, kitty --class=tfm -T Explorer joshuto"
-			"$m $a, N, exec, nemo"
+			"$m  $s, N, exec, kitty --class=tfm -T Explorer joshuto"
+			"$m  $a, N, exec, nemo"
 			
 			"$m, M, exec, spotify"
-			"$m $s, M, exec, obsidian"
+			"$m  $s, M, exec, obsidian"
 			
 			"$m, A, exec, kitty --class=anicliru -T Anime anicli-ru -q 1080"
 			
 			"$m, Z, exec, kitty --class=miniprogs -T Sound pulsemixer --no-mouse"
-			"$m $s, Z, exec, kitty --class=miniprogs -T Bluetooth bluetuith"
+			"$m  $s, Z, exec, kitty --class=miniprogs -T Bluetooth bluetuith"
 			
-			"$m, X, exec, bottles"
-			"$m $s, X, exec, prismlauncher"
+			"$m, T, exec, bottles"
+			"$m  $s, T, exec, prismlauncher"
 
 			"$m, XF86WakeUp, exec, playerctl play-pause"
 			"$m, XF86Go, exec, playerctl next"
 			"$m, Cancel, exec, playerctl previous"
 			
-			", $p, exec, grimblast copysave area $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
+			",   $p, exec, grimblast copysave area $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 			"$s, $p, exec, grimblast copysave output $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 			"$a, $p, exec, grimblast copysave active $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 		]

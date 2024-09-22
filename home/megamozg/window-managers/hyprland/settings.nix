@@ -2,13 +2,15 @@
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
 		monitor = ", 1920x1080@60, auto, 1";
+
+		# APPERANCE
 		general = {
 			gaps_in = 4;
 			gaps_out = 8;
 			border_size = 3;
 			layout = "dwindle";
 			allow_tearing = false;
-			"col.active_border" = lib.mkForce "rgb(${base0F})";
+			"col.active_border" = lib.mkForce "rgb(${base0E})";
 			"col.inactive_border" = lib.mkForce "rgb(${base01})";
 		};
 		decoration = {
@@ -31,6 +33,18 @@
 				special = true;
 			};
 		};
+		group = {
+			"col.border_active" = lib.mkForce "rgb(${base0C}) rgb(${base0B}) 45deg";
+			"col.border_inactive" = lib.mkForce "rgb(${base01})";
+			groupbar = {
+				gradients = false;
+				"col.active" = lib.mkForce "rgb(${base05})";
+				"col.inactive" = lib.mkForce "rgb(${base01})";
+				render_titles = false;
+			};
+		};
+
+		# ANIMATIONS
 		animations = {
 			enabled = true;
 			first_launch_animation = false;
@@ -53,6 +67,9 @@
 				"fadeShadow, 1, 4, default"
 			];
 		};
+		
+		# TRACKPOINT | TOUCHPAD | MOUSE
+		cursor.inactive_timeout = 1;
 		input = {
 			kb_layout = "us,ru";
 			kb_options = "grp:caps_toggle";
@@ -62,16 +79,13 @@
 				disable_while_typing = true;
 			};
 		};
-		cursor.inactive_timeout = 1;
-		device = {
-			name = "tpps/2-elan-trackpoint";
-			accel_profile = "flat";
-		};
 		gestures = {
 			workspace_swipe = true;
 			workspace_swipe_fingers = 3;
 			workspace_swipe_create_new = true;
 		};
+
+		# WINDOW LAYOUT
 		dwindle = {
 			pseudotile = true;
 			preserve_split = true;
@@ -79,6 +93,7 @@
 			# no_gaps_when_only = true;
 			force_split = 2;
 		};
+		
 		misc = {
 			disable_hyprland_logo = true;
 			disable_splash_rendering = true;
