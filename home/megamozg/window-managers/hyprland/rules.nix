@@ -2,9 +2,9 @@
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
 		windowrulev2 = [
-			"rounding 8, floating:1"
-			"noshadow, floating:0"
-			"noanim, floating:0"
+			# "rounding 8, floating:1"
+			# "noshadow, floating:0"
+			# "noanim, floating:0"
 
 			"workspace 2 silent, class:^(firefox)$"
 			"workspace 3 silent, class:^(Spotify)$"

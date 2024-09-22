@@ -1,10 +1,10 @@
 { config, lib, ... }:
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
-		monitor = "DP-1, 1920x1080@60, 0x0, 1";
+		monitor = ", 1920x1080@60, auto, 1";
 		general = {
-			gaps_in = 0;
-			gaps_out = 0;
+			gaps_in = 4;
+			gaps_out = 8;
 			border_size = 3;
 			layout = "dwindle";
 			allow_tearing = false;
@@ -12,7 +12,7 @@
 			"col.inactive_border" = lib.mkForce "rgb(${base01})";
 		};
 		decoration = {
-			rounding = 0;
+			rounding = 12;
 			drop_shadow = true;
 			shadow_ignore_window = true;
 			shadow_offset = "0 0";
@@ -32,33 +32,51 @@
 			};
 		};
 		animations = {
-			enabled = false;
+			enabled = true;
+			first_launch_animation = false;
 			bezier = [
 				"linear, 1, 1, 1, 1"
 				"over, 0, 0.1, 0.1, 0.3"
+				"myBezier, 0.05, 0.9, 0.1, 1.0"
 			];
 			animation = [
-				"windows, 1, 2, linear, slide"
-				"windowsIn, 1, 2, linear, slide"
-				"windowsOut, 1, 2, linear, slide"
+				"windowsIn, 1, 3, myBezier, popin 80%"
+				"windowsOut, 1, 3, myBezier, popin 80%"
 				"windowsMove, 1, 2, over"
-				"border, 1, 3, default"
-				"specialWorkspace, 1, 1, default, fade"
-				"fade, 1, 2, default"
-				"fadeShadow, 1, 4, default"
+				
+				"border, 1, 3, myBezier"
 				"workspaces, 1, 2.7, default, slide"
+				"specialWorkspaceIn, 1, 1, default, fade"
+				"specialWorkspaceOut, 1, 1, default, fade"
+				
+				"fade, 1, 2, myBezier"
+				"fadeShadow, 1, 4, default"
 			];
 		};
 		input = {
 			kb_layout = "us,ru";
 			kb_options = "grp:caps_toggle";
 			accel_profile = "adaptive";
+			touchpad = {
+				natural_scroll = false;
+				disable_while_typing = true;
+			};
+		};
+		cursor.inactive_timeout = 1;
+		device = {
+			name = "tpps/2-elan-trackpoint";
+			accel_profile = "flat";
+		};
+		gestures = {
+			workspace_swipe = true;
+			workspace_swipe_fingers = 3;
+			workspace_swipe_create_new = true;
 		};
 		dwindle = {
 			pseudotile = true;
 			preserve_split = true;
 			smart_resizing = true;
-			no_gaps_when_only = true;
+			# no_gaps_when_only = true;
 			force_split = 2;
 		};
 		misc = {

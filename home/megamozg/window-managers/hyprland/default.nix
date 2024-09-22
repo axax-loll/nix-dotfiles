@@ -3,12 +3,20 @@
 	imports = [ ./binds.nix ./rules.nix ./settings.nix ];
 	wayland.windowManager.hyprland = {
 	  	enable = true;
-		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+		# package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 		xwayland.enable = true;
 		systemd.enable = true;
 
-		plugins = {
-			inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-		};
+		# plugins = {
+			# inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+		# };
 	};
+	home.packages = with pkgs; [
+		light
+		hyprlock
+		fprintd
+		grimblast
+		wl-clipboard
+		hyprpicker
+	];
 }
