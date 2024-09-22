@@ -4,7 +4,8 @@
 		monitor = ", 1920x1080@60, auto, 1";
 		env = [ "SLURP_ARGS, -b 181926CC -c 8bd5caFF -B 181926CC" ];
 		exec-once = [
-			swaync
+			"swaync"
+			"waybar"
 		];
 
 		# APPERANCE

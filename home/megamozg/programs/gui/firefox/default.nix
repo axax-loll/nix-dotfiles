@@ -20,6 +20,7 @@
 				sponsorblock
 				darkreader
 				vimium-c
+				newtab-adapter
 				censor-tracker
 
 				# MISC
