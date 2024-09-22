@@ -3,7 +3,7 @@ let
 	hpkg = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
-	imports = [ ./binds.nix ./rules.nix ./settings.nix ./plugins.nix ./hyprlock.nix ];
+	imports = [ ./binds.nix ./rules.nix ./settings.nix ./plugins.nix ./swaylock.nix ];
 	wayland.windowManager.hyprland = {
 	  	enable = true;
 		package = hpkg.hyprland;
@@ -12,7 +12,7 @@ in
 	};
 	home.packages = with pkgs; [
 		light
-		hyprlock
+		swaylock
 		fprintd
 		grimblast
 		wl-clipboard
