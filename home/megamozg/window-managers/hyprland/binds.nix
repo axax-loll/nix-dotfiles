@@ -155,8 +155,7 @@
 			", XF86AudioMicMute, exec, fixf4=$(cat /sys/class/leds/platform\:\:micmute/brightness); echo $((1-fixf4)) | doas tee /sys/class/leds/platform\:\:micmute/brightness; wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 		];
 		bindl = [
-			", switch:on:Lid Switch, exec, hyprctl keyword input:kb_variant = us && hyprlock"
-			", XF86Favorites, exec, hyprctl keyword input:kb_variant = us && hyprlock"
+			# ", switch:on:Lid Switch, exec, hyprctl keyword input:kb_variant = us && hyprlock"
 		];
 	};
 }
