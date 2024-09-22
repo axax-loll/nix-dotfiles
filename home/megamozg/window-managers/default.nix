@@ -4,6 +4,7 @@
 		./hyprland
 		# ./swayfx
 		./terminals
+		./misc
 	];
 	home.packages = with pkgs; [
 		hyprcursor
@@ -12,7 +13,6 @@
 		kitty
 		
 		swaybg
-		mako
 		swaynotificationcenter
 		
 		nwg-drawer
@@ -20,5 +20,12 @@
 		
 		grimblast
 		wf-recorder
+
+		light
+		# swaylock
+		fprintd
+		grimblast
+		wl-clipboard
+		hyprpicker
 	];
 }
