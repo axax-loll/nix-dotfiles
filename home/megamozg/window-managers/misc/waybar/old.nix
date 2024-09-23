@@ -13,7 +13,7 @@
 			  "󰁻",
 			  "󰁼",
 			  "󰁽",
-		    "󰁾",
+		      "󰁾",
 			  "󰁿",
 			  "󰂀",
 			  "󰂁",
@@ -38,7 +38,7 @@
 			"interval": 1
 		},
 		"custom/launcher": {
-      "format": "<span color='#${config.lib.stylix.colors.base0C}' font='17'></span> {}",
+            "format": "<span color='#${config.lib.stylix.colors.base0C}' font='17'></span> {}",
 		},
 		"custom/separator": {
 			"format": "/",
@@ -49,7 +49,7 @@
 			"format": "󰌌 {}",
 			"format-en": "US",
 			"format-ru": "RU",
-      "keyboard-name": "at-translated-set-2-keyboard",
+            "keyboard-name": "at-translated-set-2-keyboard",
 			"interval": 1
 		},
 		"hyprland/window": {
@@ -66,8 +66,8 @@
 			"hyprland/workspaces",
 		],
 		"modules-left": [
-      "custom/launcher",
-      "custom/separator",
+            "custom/launcher",
+            "custom/separator",
 			"pulseaudio",
 			"backlight",
 			"hyprland/language"
@@ -81,7 +81,7 @@
 		"pulseaudio": {
 			"format": "{icon} {volume}%",
 			"format-icons": {
-		  "default": [
+		    "default": [
 			   "",
 			   "",
 			   ""
@@ -105,23 +105,25 @@
 			"on-click": "activate",
 			"format": "{icon}",
 			"format-icons": {
-         "1":"一",
-         "2":"二",
-         "3":"三",
-         "4":"四",
-         "5":"五",
-         "6":"六",
-         "7":"七",
-         "8":"八",
-         "9":"九",
-			   "10":"十",
+              "1":"一",
+              "2":"二",
+              "3":"三",
+              "4":"四",
+              "5":"五",
+              "6":"六",
+              "7":"七",
+              "8":"八",
+              "9":"九",
+			  "10":"十",
 			},
-			"persistent-workspaces": {
+		   "persistent-workspaces": {
 		     "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
-			  },
+			},
 		  },
 		}
     '';
+
+    
     "waybar/style.css".text = ''
       * {
         font-family: JetBrainsMono NerdFont, SourceHanSansJP;

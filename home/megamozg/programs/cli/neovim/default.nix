@@ -1,6 +1,6 @@
-{ nixvim, ... }:
+{ nixvim, inputs, ... }:
 {
-	imports = [ nixvim.homeManagerModules.nixvim ./plugins.nix ];
+	imports = [ inputs.nixvim.homeManagerModules.nixvim ./plugins ];
 	programs.nixvim = {
 		enable = true;
 		defaultEditor = true;
@@ -19,6 +19,11 @@
 				register = "unnamedplus";
 			};
 			breakindent = true;
+			smarttab = true;
+			tabstop = 4;
+			shiftwidth = 4;
+			softtabstop = 4;
+			autoindent = true;
 			undofile = true;
 			ignorecase = true;
 			smartcase = true;

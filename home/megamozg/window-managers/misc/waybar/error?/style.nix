@@ -98,14 +98,36 @@
       min-height: 30px;
     }
 
-    #battery,
-    #backlight,
-    #custom-date,
-    #clock,
-    #language,
+    #battery {
+      background-color: transparent;
+      color: #${base06};
+    }
+    
+    #backlight {
+      background-color: transparent;
+      color: #${base06};
+    }
+    
+    #custom-date {
+      background-color: transparent;
+      color: #${base06};
+    }
+    
+    #clock {
+      background-color: transparent;
+      color: #${base06};
+    }
+    
+    #language {
+      background-color: transparent;
+      color: #${base06};
+    }
+    
     #pulseaudio {
       margin: 3 4 3 4px;
       padding: 0 0.4em;
+      background-color: transparent;
+      color: #${base06};
     }
 
     #custom-separator {

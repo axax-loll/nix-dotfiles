@@ -3,7 +3,7 @@
 	# imports = [ ./theme.nix ];
 	programs.helix = {
 		enable = true;
-		# defaultEditor = true;
+		defaultEditor = true;
 		settings = {
 			editor = {
 				line-number = "relative";
