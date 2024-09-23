@@ -1,27 +1,38 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, installShellFiles
-, stdenv
-, darwin
+{
+  lib,
+  rustPlatform,
+  fetchCrate,
+  stdenv,
+  darwin,
+  nix-update-script,
+  testers,
+  tgt,
 }:
 
 rustPlatform.buildRustPackage rec {
   pname = "tgt";
   version = "1.0.0";
 
-  src = fetchFromGitHub {
-    owner = "FedericoBruzzone";
-    repo = "tgt";
-    rev = "v${version}";
+  src = fetchCrate {
+    inherit pname version;
+    hash = "sha256-ypuXkYW3RTWIm/FMojMkpEsLRnmT1GRiZbUpO+yB1XE=";
   };
 
-  meta = with lib; {
-    description = "tui telegram client";
-    homepage = "https://github.com/kamiyaa/joshuto";
-    changelog = "https://github.com/FedericoBruzzone/tgt/releases/tag/${src.rev}";
-    license = licenses.mit;
-    maintainers = with maintainers; [ azikx ];
-    mainProgram = "tgt_telegram";
+  cargoHash = "sha256-uCdkayWOlwLBtMFPzscocHr2yP2OIVVSyz3m9B34STE=";
+
+  buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.AppKit ];
+
+  passthru = {
+    updateScript = nix-update-script;
+    tests.version = testers.testVersion { package = tgt; };
+  };
+
+  meta = {
+    description = "TUI client for Telegram";
+    homepage = "https://crates.io/crates/tgt";
+    changelog = "https://github.com/FedericoBruzzone/tgt/releases/tag/v${version}";
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ azikx ];
+    mainProgram = "tgt";
   };
 }

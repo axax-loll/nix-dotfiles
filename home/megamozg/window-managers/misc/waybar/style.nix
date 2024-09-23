@@ -46,7 +46,7 @@
     }
 
     #workspaces button.active {
-      background: radial-gradient(circle, #${base06} 0%, #${base0D} 50%, #${base0B} 100%);
+      background: radial-gradient(circle, #${base0E} 0%, #${base0E} 50%, #${base0D} 100%);
       background-size: 400% 400%;
       animation: gradient 5s linear infinite;
       transition: all 0.3s ease-in-out;

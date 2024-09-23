@@ -2,9 +2,9 @@
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
 		monitor = ", 1920x1080@60, auto, 1";
-		env = [ "SLURP_ARGS, -b 181926CC -c 8bd5caFF -B 181926CC" ];
+		env = [ "SLURP_ARGS, -b ${base00}CC -c ${base06}FF -B ${base0F}CC" ];
 		exec-once = [
-			"swaync"
+			"mako"
 			"waybar"
 		];
 
@@ -15,7 +15,7 @@
 			border_size = 3;
 			layout = "dwindle";
 			allow_tearing = false;
-			"col.active_border" = lib.mkForce "rgb(${base0E})";
+			"col.active_border" = lib.mkForce "rgb(${base06})";
 			"col.inactive_border" = lib.mkForce "rgb(${base01})";
 		};
 		decoration = {

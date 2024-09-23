@@ -1,26 +1,35 @@
 { config, ... }:
+let
+  terminal = "kitty";
+  fileman = "joshuto";
+in
 {
   imports = [ ./style.nix ];
   programs.waybar = with config.lib.stylix.colors; {
     enable = true;
     settings = {
+      # BAR AT BOTTOM
       mainBar = {
         layer = "top";
         position = "bottom";
         height = 1;
         modules-left = [
            "custom/launcher"
-           "custom/separator"
+           "custom/separatorL"
            "pulseaudio"
+           "custom/separatorL"
            "backlight"
+           "custom/separatorL"
            "hyprland/language"
          ];
         modules-center = [
           "hyprland/workspaces"
         ];
         modules-right = [
-          "custom/date"
+          "disk"
+          "custom/separatorR"
           "clock#time"
+          "custom/separatorR"
           "battery"
         ];
 
@@ -29,8 +38,8 @@
          	format = "<span color='#${base0C}' font='17'></span> {}";
           tooltip = false;
         };
-        "custom/separator" = {
-         	format = "/";
+        "custom/separatorL" = {
+         	format = "|";
          	interval = 1;
           tooltip = false;
         };
@@ -38,16 +47,18 @@
           format = "{icon} {volume}%";
           format-icons = {
             default = [ "" " " " " ];
-            headphone = [ " " ];
+            headphone = [ "" ];
+            headset = [ "" ];
           };
-          format-muted = [ " " ];
+          format-muted = "  muted";
           scroll-step = 3;
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           tooltip = false;
         };
         "backlight" = {
           device = "intel_backlight";
-          format = "{icon} {percent}%";
+          format = " {icon}{percent}% ";
           format-icons = [ "󱩎 " "󱩏 " "󱩐 " "󱩑 " "󱩒 " "󱩓 " "󱩔 " "󱩕 " "󱩖 " "󰛨 " ];
           scroll-step = 1;
           tooltip = false;
@@ -81,25 +92,34 @@
         };
 
         # RIGHT MODULES
-        "custom/date" = {
-          exec = ''date +\" %e %b\"'';
+        "custom/separatorR" = {
+          format = "|";
           interval = 1;
           tooltip = false;
         };
+        "disk" = {
+          format = "{used} of {total} ";
+          interval = 30;
+          path = "/";
+          unit = "GB";
+          on-click-middle = "󰋊 ${terminal} ${fileman}";
+          tooltip = false;
+        };
         "clock#time" = {
-          format = "󰥔 {:%H:%M}";
+          format = "  {:%H:%M} ";
           interval = 1;
           tooltip = false;
         };
         "battery" = {
           format = "{icon} {capacity}%";
           format-alt = "{icon} {time}";
-          format-charging = "#${base0D}'>󰂅</span> {capacity}%";
+          format-charging = "󱐋{capacity}%";
           format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           states = {
             critical = 15;
             warning = 30;
           };
+          tooltip = false;
         };
       };
     };

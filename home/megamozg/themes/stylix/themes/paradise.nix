@@ -1,6 +1,10 @@
+{ pkgs, ... }:
 {
 	stylix = {
-		image= ../walls/flower2.png;
+		image = pkgs.fetchurl {
+			url = "https://github.com/axax-loll/paradise-wallpapers/blob/main/car.jpeg?raw=true";
+			sha256 = "sha256-ptXa7uoCEys209fe6wnvT+k9ueeuOP8Tua/PlujTzas=";
+		};
 		base16Scheme = {
 			base00 = "#151515";
 			base01 = "#1F1F1F";

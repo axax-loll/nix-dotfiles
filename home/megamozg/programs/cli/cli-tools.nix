@@ -16,5 +16,18 @@
 		starship
 		fastfetch
 		pulsemixer
+
+		openvpn
+		nix-tree
+		
+		nvtopPackages.amd
+		btop
+		
+		bluetuith
+		ytfzf
+		rustmission
+		tty-clock
+		confetty
+		tenki
 	];
 }

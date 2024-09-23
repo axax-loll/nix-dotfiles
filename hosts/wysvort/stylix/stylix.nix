@@ -10,6 +10,10 @@
 			nixos-icons.enable = true; # ICONS
 			chromium.enable = true; # CHROMIUM LOL
 			fish.enable = true; # SHELL
+			plymouth = {
+				enable = true;
+				logoAnimated = true;
+			};
 		};
 	};
 }

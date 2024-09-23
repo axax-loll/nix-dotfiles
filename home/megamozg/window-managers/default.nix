@@ -14,6 +14,7 @@
 		
 		swaybg
 		swaynotificationcenter
+		mako
 		
 		nwg-drawer
 		inputs.anyrun.packages."x86_64-linux".anyrun 

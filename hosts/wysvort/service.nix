@@ -48,21 +48,20 @@
 				driver = pkgs.libfprint-2-tod1-vfs0090;
 			};
 		};
-		greetd = {
-			enable = true;
-			package = pkgs.greetd.regreet;
-			settings = {
-				default_session = {
-					command = "cage -s regreet";
-					user = "megamozg";
-				};
-			};
-		};
+		# greetd = {
+		# 	enable = false;
+		# 	package = pkgs.greetd.regreet;
+		# 	settings = {
+		# 		default_session = {
+		# 			command = "cage -s regreet";
+		# 			user = "megamozg";
+		# 		};
+		# 	};
+		# };
 
 		# SIMPLE SERVICES
 		dbus.implementation = "broker";
 		upower.enable = true;
-		cage.enable = true;
 		thermald.enable = true;
 		# thinkfan.enable = true;
 		gvfs.enable = true;

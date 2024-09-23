@@ -21,5 +21,6 @@
 			];
 		};
 		system76.enableAll = true;
+		firmware = [ pkgs.linux-firmware ];
 	};
 }

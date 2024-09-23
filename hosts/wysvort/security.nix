@@ -13,15 +13,14 @@
 					persist = true;
 				}
 			];
+			extraConfig = ''
+				permit nopass megamozg as root cmd light
+				permit nopass megamozg as root cmd tee
+			'';
 		};
 		pam = {
 			services = {
 				swaylock.fprintAuth = true;
-				regreet.fprintAuth = true;
-				greetd = {
-					fprintAuth = true;
-					enableGnomeKeyring = true;
-				};
 			};
 		};
 		polkit.enable = true;

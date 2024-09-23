@@ -26,6 +26,8 @@
 		anime4k
 
 		bottles
+		# mindustry
+		transmission_4
 		
 		(nerdfonts.override {
 			fonts = [
@@ -36,5 +38,6 @@
 
 	 	inputs.ayugram-desktop.packages.${pkgs.system}.default
 		(pkgs.callPackage ./custom-pkgs/anicliru/anicli-ru.nix { })
+		# (pkgs.callPackage ./custom-pkgs/tgt/tgt.nix { })
 	];
 }

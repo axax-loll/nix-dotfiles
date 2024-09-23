@@ -4,6 +4,7 @@
 	boot = {
 		kernelPackages = pkgs.linuxPackages_xanmod_latest;
 		kernelModules = [ "kvm-amd" ];
+		consoleLogLevel = 0;
 		kernelParams = [ 
 			"quiet"
 			"loglevel=3"
@@ -13,12 +14,13 @@
 			"split_lock_detect=off"
 			"pci=pcie_bus_perf"
 			"psmouse.synaptics_intertouch=0"
+			"rd.systemd.show_status=false"
 		];
 		
 		loader = {
 			systemd-boot = {
 				enable = true;
-				configurationLimit = 20;
+				configurationLimit = 4;
 			};
 			efi.canTouchEfiVariables = true;
 			timeout = 0;
@@ -41,7 +43,13 @@
 			systemd.enable = true;
 			compressor = "zstd";
 			compressorArgs = [ "-9" ];
+			verbose = false;
 		};
+
+		plymouth = {
+			enable = false;
+		};
+		
 		tmp.cleanOnBoot = true;
 	};
 }
