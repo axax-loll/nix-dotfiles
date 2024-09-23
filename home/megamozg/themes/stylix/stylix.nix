@@ -32,7 +32,7 @@
 			nushell.enable = true;
 			hyprland.enable = true;
 			sway.enable = true;
-			waybar = { enable = true; enableCenterBackColors = true; enableLeftBackColors = true; enableRightBackColors = true; };
+			# waybar = { enable = true; enableCenterBackColors = true; enableLeftBackColors = true; enableRightBackColors = true; };
 			foot.enable = true;
 			kitty = { enable = true; variant256Colors = false; };
 			gtk.enable = true;
