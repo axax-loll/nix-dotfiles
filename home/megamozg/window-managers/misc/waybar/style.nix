@@ -1,9 +1,9 @@
 { config, ... }:
 {
-  programs.waybar.style = ''
+  programs.waybar.style = with config.lib.stylix.colors; ''
     /* BAR ITSELF */
     * {
-      font-family: "JetBrainsMono Nerd Font" !important;
+      font-family: "JetBrainsMono Nerd Font";
       font-weight: bold;
       font-size: 16px;
     }
@@ -76,6 +76,18 @@
     }
 
     /* MODULES */
+    #custom-date,
+    #battery,
+    #backlight
+    #clock,
+    #pulseaudio,
+    #workspaces,
+    #window,
+    #language,
+    #text,
+    #custom-launcher,
+    #custom-separator
+    
     #tray {
       color: #${base06};
       background: #${base00};
@@ -86,11 +98,11 @@
       min-height: 30px;
     }
 
-    #battery
-    #backlight
-    #custom-date
-    #clock
-    #language
+    #battery,
+    #backlight,
+    #custom-date,
+    #clock,
+    #language,
     #pulseaudio {
       margin: 3 4 3 4px;
       padding: 0 0.4em;
