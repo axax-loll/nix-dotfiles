@@ -1,6 +1,6 @@
 { config, ... }:
 {
-	xdg.configFile = with config.lib.stylix.colors {
+	xdg.configFile = with config.lib.stylix.colors; {
 		"waybar/style.css".text = ''
 		      * {
 		        font-family: JetBrainsMono NerdFont, SourceHanSansJP;
