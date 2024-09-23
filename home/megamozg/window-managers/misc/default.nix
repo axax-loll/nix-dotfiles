@@ -2,7 +2,7 @@
 	imports = [
 		./swaylock
 		./mako
-		./waybar
+		./waybar/error
 		./swaync
 	];
 }

@@ -1,8 +1,6 @@
 { pkgs, config, ... }:
 {
   xdg.configFile = with config.lib.stylix.colors {
-
-  	# CONFIG FILE EANIY <JSFJSGFSAFJYG
     "waybar/config.jsonc".text = ''
 		{
 		"battery": {
@@ -123,8 +121,6 @@
 		  },
 		}
     '';
-
-    # FUCK BLYAT EBANIY CSS
     "waybar/style.css".text = ''
       * {
         font-family: JetBrainsMono NerdFont, SourceHanSansJP;
