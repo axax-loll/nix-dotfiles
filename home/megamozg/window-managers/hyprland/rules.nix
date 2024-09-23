@@ -22,7 +22,7 @@
 			"move center, class:^(tfm)$"
 
 			"float, title:^(Media viewer)$"
-			"maximize, title:^(Media viewer)$"
+			"fullscreen, title:^(Media viewer)$"
 			"size 670 540, title:^(Media viewer)$"
 
 			"float, class:^(xdg-desktop-portal-gtk)$"

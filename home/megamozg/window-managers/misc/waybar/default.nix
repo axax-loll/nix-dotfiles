@@ -20,6 +20,8 @@ in
            "custom/separatorL"
            "backlight"
            "custom/separatorL"
+           "network"
+           "custom/separatorL"
            "hyprland/language"
          ];
         modules-center = [
@@ -35,12 +37,13 @@ in
 
          # LEFT MODULES
         "custom/launcher" = {
-         	format = "<span color='#${base0C}' font='17'></span> {}";
+          format = "<span color='#${base0C}' font='17'></span> {}";
+          on-click = "nwg-drawer -ovl -nocats -nofs -d -c 7 -mb -49";
           tooltip = false;
         };
         "custom/separatorL" = {
-         	format = "|";
-         	interval = 1;
+          format = "|";
+          interval = 1;
           tooltip = false;
         };
         "pulseaudio" = {
@@ -58,9 +61,18 @@ in
         };
         "backlight" = {
           device = "intel_backlight";
-          format = " {icon}{percent}% ";
+          format = "{icon}{percent}%";
           format-icons = [ "󱩎 " "󱩏 " "󱩐 " "󱩑 " "󱩒 " "󱩓 " "󱩔 " "󱩕 " "󱩖 " "󰛨 " ];
           scroll-step = 1;
+          tooltip = false;
+        };
+        "network" = {
+          format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
+          format-wifi = "{icon} CON";
+          format-ethernet = "󰈀";
+          format-disconnected = "⚠";
+          on-click = "nmtui";
+          interval = 5;
           tooltip = false;
         };
         "hyprland/language" = {
@@ -69,6 +81,16 @@ in
           format-ru = "RU";
           keyboard-name = "at-translated-set-2-keyboard";
           tooltip = false;
+        };
+        "cava" = {
+          framerate = 24;
+          autosens = 1;
+          bars = 12;
+          source = "auto";
+          format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          actions = {
+            on-click-right = "mode";
+          };
         };
 
         # CENTER MODULES
@@ -97,21 +119,26 @@ in
           interval = 1;
           tooltip = false;
         };
+        "tray" = {
+          icon-size = 18;
+          show-passive-items = true;
+          spacing = 8;
+        };
         "disk" = {
-          format = "{used} of {total} ";
+          format = "{used} of {total} 󰋊";
           interval = 30;
           path = "/";
           unit = "GB";
-          on-click-middle = "󰋊 ${terminal} ${fileman}";
+          on-click-middle = "${terminal} ${fileman}";
           tooltip = false;
         };
         "clock#time" = {
-          format = "  {:%H:%M} ";
+          format = "{:%H:%M}  ";
           interval = 1;
           tooltip = false;
         };
         "battery" = {
-          format = "{icon} {capacity}%";
+          format = "{capacity}% {icon}";
           format-alt = "{icon} {time}";
           format-charging = "󱐋{capacity}%";
           format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];

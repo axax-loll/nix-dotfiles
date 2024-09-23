@@ -26,8 +26,12 @@
 		anime4k
 
 		bottles
-		# mindustry
-		transmission_4
+		mindustry-wayland
+		mangohud
+		superTuxKart
+		transmission_4-gtk
+
+		trayscale
 		
 		(nerdfonts.override {
 			fonts = [

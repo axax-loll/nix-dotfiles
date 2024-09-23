@@ -29,5 +29,7 @@
 		tty-clock
 		confetty
 		tenki
+
+		trash-cli
 	];
 }

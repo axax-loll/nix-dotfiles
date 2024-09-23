@@ -605,6 +605,27 @@
         "type": "github"
       }
     },
+    "hyprfocus": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ],
+        "nix-filter": "nix-filter"
+      },
+      "locked": {
+        "lastModified": 1717066948,
+        "narHash": "sha256-R1ZgNhQkoS6ZHRRKB+j5vYgRANfYO//sHbrD7moUTx0=",
+        "owner": "pyt0xic",
+        "repo": "hyprfocus",
+        "rev": "aa7262d3a4564062f97b9cfdad47fd914cfb80f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pyt0xic",
+        "repo": "hyprfocus",
+        "type": "github"
+      }
+    },
     "hyprgrass": {
       "inputs": {
         "hyprland": [
@@ -809,6 +830,21 @@
         "type": "github"
       }
     },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1694857738,
+        "narHash": "sha256-bxxNyLHjhu0N8T3REINXQ2ZkJco0ABFPn6PIe2QUfqo=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "41fd48e00c22b4ced525af521ead8792402de0ea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1726905744,
@@ -978,6 +1014,7 @@
         "firefox-addons": "firefox-addons",
         "fuji-wallpapers": "fuji-wallpapers",
         "home-manager": "home-manager",
+        "hyprfocus": "hyprfocus",
         "hyprgrass": "hyprgrass",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",

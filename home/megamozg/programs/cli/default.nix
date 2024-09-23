@@ -1,6 +1,6 @@
 {
 	imports = [
-		./cli-tools.nix
+		./pkgs.nix
 		
 		./eza
 		./fastfetch

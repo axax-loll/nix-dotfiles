@@ -15,7 +15,7 @@
 			border_size = 3;
 			layout = "dwindle";
 			allow_tearing = false;
-			"col.active_border" = lib.mkForce "rgb(${base06})";
+			"col.active_border" = lib.mkForce "rgb(${base01})";
 			"col.inactive_border" = lib.mkForce "rgb(${base01})";
 		};
 		decoration = {
@@ -25,6 +25,8 @@
 			shadow_offset = "0 0";
 			shadow_range = 10;
 			shadow_render_power = 8;
+			dim_inactive = true;
+			dim_strength = 0.3;
 			blur = {
 				enabled = true;
 				size = 18;

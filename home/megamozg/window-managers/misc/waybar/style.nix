@@ -20,7 +20,7 @@
       border-bottom: 0;
       border-style: solid;
       border-color: #3C3836;
-      box-shadow: 1 1 3 1px #101010;
+      /* box-shadow: 1 1 3 1px #101010; */
     }
 
     /* WORKSPACES */
@@ -87,61 +87,28 @@
     #text,
     #custom-launcher,
     #custom-separator
-    
+
+    #battery,
+    #backlight,
+    #custom-date,
+    #cava,
+    #network,
+    #disk,
+    #clock,
+    #language,
+    #pulseaudio,
+    #custom-separator,
+    #custom-launcher,
     #tray {
       color: #${base06};
-      background: #${base00};
+      background-color: transparent;
       padding: 0 0.4em;
       padding-top: 0px;
       padding-bottom: 2px;
       border-style: solid;
       min-height: 30px;
     }
-
-    #battery {
-      background-color: transparent;
-      color: #${base06};
-    }
     
-    #backlight {
-      background-color: transparent;
-      color: #${base06};
-    }
-    
-    #custom-date {
-      background-color: transparent;
-      color: #${base06};
-    }
-    
-    #clock {
-      background-color: transparent;
-      color: #${base06};
-    }
-    
-    #language {
-      background-color: transparent;
-      color: #${base06};
-    }
-    
-    #pulseaudio {
-      margin: 3 4 3 4px;
-      padding: 0 0.4em;
-      background-color: transparent;
-      color: #${base06};
-    }
-
-    #custom-separator {
-      padding: 0px;
-      margin: 0px;
-    }
-
-    #custom-launcher {
-      margin-left: 0px;
-      margin-right: 0px;
-      padding-right: 0.6em;
-      border-radius: 0 20 20 0px;
-    }
-
     #workspaces {
       margin: 3 0 3 0px;
       border-radius: 14 14 14 14px;
