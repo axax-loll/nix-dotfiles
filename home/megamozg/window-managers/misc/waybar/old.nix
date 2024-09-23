@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 {
-  home.packages = with pkgs config.lib.stylix.colors; [ waybar ];
+  home.packages = with pkgs; [ waybar ];
   xdg.configFile = {
     "waybar/config.jsonc".text = ''
 		{
