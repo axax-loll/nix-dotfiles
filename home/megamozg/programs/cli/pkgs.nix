@@ -34,5 +34,8 @@
 
 		trash-cli
 		inxi
-	];
+
+		ferium
+		portablemc
+		];
 }

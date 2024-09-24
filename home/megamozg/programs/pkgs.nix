@@ -10,6 +10,7 @@
 		
 		xdg-user-dirs
 		libreoffice-fresh
+		onlyoffice-desktopeditors
 
 		nemo-with-extensions
 		nemo-fileroller
