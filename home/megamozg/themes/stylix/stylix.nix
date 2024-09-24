@@ -28,7 +28,6 @@
 		};
 		targets = {
 			tmux.enable = true;
-			tmux.enable = true;
 			fish.enable = true;
 			nushell.enable = true;
 			hyprland.enable = true;
