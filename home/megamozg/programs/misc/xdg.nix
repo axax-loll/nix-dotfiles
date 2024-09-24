@@ -5,7 +5,10 @@
 			enable = true;
 			# xdgOpenUsePortal = true;
 			config.common.default = "gtk";
-			extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+			extraPortals = with pkgs; [
+				xdg-desktop-portal-hyprland
+				xdg-desktop-portal-gtk
+			];
 		};
 		mime = {
 			enable = true;

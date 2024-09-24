@@ -1,10 +1,16 @@
 { pkgs, inputs, config, ... }:
+let
+	coma = packages.${pkgs.system};
+	hypl = hyprland-plugins.${coma};
+in
 {
 	wayland.windowManager.hyprland = with config.lib.stylix.colors; {
 		plugins = with inputs; [
-			hyprgrass.packages.${pkgs.system}.default
-			hyprfocus.packages.${pkgs.system}.default
-			Hyprspace.packages.${pkgs.system}.Hyprspace
+			hyprgrass.${coma}.default
+			hyprfocus.${coma}.default
+			Hyprspace.${coma}.Hyprspace
+			${hypl}.hyprbars
+			${hypl}.hyprexpo
 		];
 		settings.plugin = {
 			# VIRTUAL WORKSPACES
