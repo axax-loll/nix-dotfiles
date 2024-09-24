@@ -107,9 +107,10 @@ in
             "7" = "七";
             "8" = "八";
             "9" = "九";
+            "10" = "十";
           };
           persistent-workspaces = {
-            "*" = [ 1 2 3 4 5 6 7 8 9 ];
+            "*" = [ 1 2 3 4 5 6 7 8 9 10 ];
           };
         };
 
@@ -125,7 +126,7 @@ in
           spacing = 8;
         };
         "disk" = {
-          format = "{used} of {total} 󰋊";
+          format = "{used:0f} of {total:0f} 󰋊";
           interval = 30;
           path = "/";
           unit = "GB";
@@ -139,8 +140,8 @@ in
         };
         "battery" = {
           format = "{capacity}% {icon}";
-          format-alt = "{icon} {time}";
-          format-charging = "󱐋{capacity}%";
+          format-alt = "{time} {icon}";
+          format-charging = "{capacity}% 󱐋";
           format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           states = {
             critical = 15;

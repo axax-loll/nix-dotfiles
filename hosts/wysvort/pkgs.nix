@@ -10,7 +10,7 @@ in
 		nh git fish
 		doas micro
 		zapret
-		hyprland
+		hyprland light
 		home-manager
 		greetd.regreet
 		cage

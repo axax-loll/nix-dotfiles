@@ -5,7 +5,7 @@
 		megamozg = {
 			shell = pkgs.fish;
 			isNormalUser = true;
-			extraGroups = [ "networkmanager" "wheel" ];
+			extraGroups = [ "networkmanager" "wheel" "video" ];
 		};
 	};
 	system.stateVersion = "24.05";

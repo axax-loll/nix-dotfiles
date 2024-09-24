@@ -29,7 +29,9 @@
 		tty-clock
 		confetty
 		tenki
+		light
 
 		trash-cli
+		inxi
 	];
 }

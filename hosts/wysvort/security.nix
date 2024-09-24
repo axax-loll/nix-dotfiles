@@ -8,7 +8,7 @@
 			wheelNeedsPassword = true;
 			extraRules = [
 				{
-					users = [ "wysvort" ];
+					users = [ "megamozg" ];
 					keepEnv = true; 
 					persist = true;
 				}
