@@ -3,8 +3,8 @@
 	programs.fzf = {
 		enable = true;
 		enableFishIntegration = true;
-		defaultOptions = [
-			"--margin 5"
-		];
+		# defaultOptions = [
+			# "--margin 1"
+		# ];
 	};
 }
