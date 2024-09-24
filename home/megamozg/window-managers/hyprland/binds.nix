@@ -27,7 +27,7 @@
 		bind = [
 			# BUILTIN COMMANDS
 			"$m, $sp, togglefloating"
-			"$m  $s, $sp, overview:toggle"
+			"$m  $s, $sp, hyprexpo:expo, toggle"
 			"$m, Q, killactive"
 			"$m, C, centerwindow"
 			"$m, F, fullscreen"
@@ -48,9 +48,6 @@
 			"$m  $s, S, movetoworkspace, special:magic"
 
 			"$m, $md, workspace, e+1"
-			"$m, $mu, workspace, e-1"
-
-			"$m, , workspace, e+1"
 			"$m, $mu, workspace, e-1"
 			
 			# PROGRAMS

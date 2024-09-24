@@ -1,45 +1,15 @@
 { pkgs, inputs, config, ... }:
-let
-	coma = packages.${pkgs.system};
-	hypl = hyprland-plugins.${coma};
-in
 {
 	wayland.windowManager.hyprland = with config.lib.stylix.colors; {
 		plugins = with inputs; [
-			hyprgrass.${coma}.default
-			hyprfocus.${coma}.default
-			Hyprspace.${coma}.Hyprspace
-			hypl.hyprbars
-			hypl.hyprexpo
+			# COMMUNITY
+			hyprfocus.packages.${pkgs.system}.default
+
+			# BUILTIN
+			# hyprland-plugins.packages.${pkgs.system}.hyprbars
+			hyprland-plugins.packages.${pkgs.system}.hyprexpo
 		];
 		settings.plugin = {
-			# VIRTUAL WORKSPACES
-			overview = {
-				panelColor = "rgb(${base00})";
-				panelBorderColor = "rgb(${base0C})";
-				workspaceActiveBackground = "rgb(${base00})";
-				workspaceInactiveBackground = "rgb(${base00})";
-				drawActiveWorkspace = false;
-				hideOverlayLayers = true;
-				hideRealLayers = true;
-				showEmptyWorkspace = false;
-				dragAlpha = 1;
-
-				panelHeight = 200;
-				onBottom = true;
-				gapsIn = 4;
-				gapsOut = 8;
-
-				overrideAnimSpeed = 2;
-			};
-
-			# TOUCHPAD GESTURES
-			touch_gestures = {
-				sensitivity = 1.0;
-				workspace_swipe_fingers = 3;
-				workspace_swipe_edge = "d";
-			};
-
 			# FOCUS
 			hyprfocus = {
 				enabled = "yes";
@@ -62,14 +32,36 @@ in
 					out_speed = 2;
 				};
 			};
-		};
-		extraConfig = ''
-			hyprgrass-bind = , swipe:4:d, killactive
-			hyprgrass-bind = , edge:l:d, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
-			hyprgrass-bind = , edge:l:u, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-			hyprgrass-bindm = , longpress:2, movewindow
-			hyprgrass-bindm = , longpress:3, resizewindow
-		'';
+			# EXPO LIKE IDK
+			hyprexpo = {
+				columns = 3;
+				gap_size = 5;
+				bg_col = "rgb(${base00})";
+				workspace_method = "center current";
+
+				enable_gesture = true;
+				gesture_fingers = 3;
+				gesture_distance = 300;
+				gesture_positive = true;
+			};
+
+			# WINDOW TITLES
+			# hyprbars = {
+			# 	bar_height = 20;
+			# 	bar_color = "rgb(${base00})";
+			# 	"col.text" = "rgb(${base06})";
+			# 	bar_text_size = 12;
+			# 	bar_text_font = "JetBrainsMono NerdFont";
+			# 	bar_text_align = "left";
+			# 	bar_buttons_alignment = "left";
+			# 	bar_part_of_window = true;
+			# 	bar_precedence_over_border = true;
+			# 	hyprbars-button = [
+			# 		"rgb(${base08}), 10, 󰖭, hyprctl dispatch killactive"
+			# 		"rgb(${base0C}), 10, , hyprctl dispatch fullscreen 1"
+			# 	];
+			# };
+		};
 	};
 }
