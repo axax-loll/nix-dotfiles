@@ -28,6 +28,7 @@
 		};
 		targets = {
 			tmux.enable = true;
+			tmux.enable = true;
 			fish.enable = true;
 			nushell.enable = true;
 			hyprland.enable = true;
@@ -42,6 +43,7 @@
 			fzf.enable = true;
 			bat.enable = true;
 			mako.enable = true;
+			mangohud.enable = true;
 			vesktop.enable = true;
 			qutebrowser.enable = true;
 			firefox = { enable = true; };

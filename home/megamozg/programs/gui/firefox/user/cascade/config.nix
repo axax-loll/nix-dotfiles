@@ -10,7 +10,7 @@
 		
 		  /*  Global Border Radius
 		   *  applied to ALL UI elements
-		   */ --uc-border-radius: 16px;
+		   */ --uc-border-radius: 12px;
 		
 		
 		  /*  The distance the Statuspanel floats

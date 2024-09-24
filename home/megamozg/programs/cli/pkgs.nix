@@ -5,6 +5,7 @@
 		joshuto
 		
 		bat
+		fzf
 		
 		cava
 		lutgen

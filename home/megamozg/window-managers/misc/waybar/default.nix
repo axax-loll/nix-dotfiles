@@ -126,7 +126,7 @@ in
           spacing = 8;
         };
         "disk" = {
-          format = "{used:0f} of {total:0f} 󰋊";
+          format = "{used} of {total} 󰋊";
           interval = 30;
           path = "/";
           unit = "GB";
