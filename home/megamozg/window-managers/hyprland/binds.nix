@@ -73,7 +73,7 @@
 			"$m, M, exec, spotify"
 			"$m  $s, M, exec, obsidian"
 			
-			"$m, A, exec, kitty --class=anicliru -T Anime anicli-ru -q 1080 -pa='glsl-shaders=${pkgs.anime4k}/Anime4K_Clamp_Highlights.glsl:${pkgs.anime4k}/Anime4K_Restore_CNN_M.glsl:${pkgs.anime4k}/Anime4K_Upscale_CNN_x2_M.glsl:${pkgs.anime4k}/Anime4K_AutoDownscalePre_x2.glsl:${pkgs.anime4k}/Anime4K_AutoDownscalePre_x4.glsl:${pkgs.anime4k}/Anime4K_Upscale_CNN_x2_S.glsl'"
+			"$m, A, exec, kitty --class=anicliru -T Anime anicli-ru -q 1080"
 			
 			"$m, Z, exec, kitty --class=miniprogs -T Sound pulsemixer --no-mouse"
 			"$m  $s, Z, exec, kitty --class=miniprogs -T Bluetooth bluetuith"

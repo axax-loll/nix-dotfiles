@@ -9,8 +9,8 @@ in
 			hyprgrass.${coma}.default
 			hyprfocus.${coma}.default
 			Hyprspace.${coma}.Hyprspace
-			${hypl}.hyprbars
-			${hypl}.hyprexpo
+			hypl.hyprbars
+			hypl.hyprexpo
 		];
 		settings.plugin = {
 			# VIRTUAL WORKSPACES
