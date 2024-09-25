@@ -13,7 +13,6 @@ in
 		hyprland light
 		home-manager
 		greetd.regreet
-		cage
 
 		adw-gtk3
 	];

@@ -10,7 +10,7 @@
 		
 		xdg-user-dirs
 		libreoffice-fresh
-		# onlyoffice-desktopeditors
+		onlyoffice-bin
 
 		nemo-with-extensions
 		nemo-fileroller
@@ -27,6 +27,7 @@
 		anime4k
 
 		bottles
+		# "wineWow64Packages.staging"
 		mindustry-wayland
 		mangohud
 		superTuxKart

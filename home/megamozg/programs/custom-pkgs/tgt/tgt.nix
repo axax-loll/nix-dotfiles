@@ -1,31 +1,16 @@
-{
-  lib,
-  rustPlatform,
-  fetchCrate,
-  stdenv,
-  darwin,
-  nix-update-script,
-  testers,
-  tgt,
-}:
+{ lib, pkgs, rustPlatform, ... }:
 
 rustPlatform.buildRustPackage rec {
   pname = "tgt";
   version = "1.0.0";
 
-  src = fetchCrate {
-    inherit pname version;
-    hash = "sha256-ypuXkYW3RTWIm/FMojMkpEsLRnmT1GRiZbUpO+yB1XE=";
+  src = pkgs.fetchFromGitHub {
+    owner = "FedericoBruzzone";
+    repo = "${pname}";
   };
 
-  cargoHash = "sha256-uCdkayWOlwLBtMFPzscocHr2yP2OIVVSyz3m9B34STE=";
-
-  buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.AppKit ];
-
-  passthru = {
-    updateScript = nix-update-script;
-    tests.version = testers.testVersion { package = tgt; };
-  };
+  buildFeatures = [ "download-tdlib" ];
+  native
 
   meta = {
     description = "TUI client for Telegram";

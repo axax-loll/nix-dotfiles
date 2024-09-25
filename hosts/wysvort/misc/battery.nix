@@ -1,7 +1,7 @@
 { ... }:
 {
 	powerManagement = {
-		enable = true;
-		powertop.enable = true;
+		enable = false;
+		powertop.enable = false;
 	};
 }

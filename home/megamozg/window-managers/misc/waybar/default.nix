@@ -14,15 +14,15 @@ in
         position = "bottom";
         height = 1;
         modules-left = [
-           "custom/launcher"
-           "custom/separatorL"
-           "pulseaudio"
-           "custom/separatorL"
-           "backlight"
-           "custom/separatorL"
-           "network"
-           "custom/separatorL"
-           "hyprland/language"
+          "custom/launcher"
+          "custom/separatorL"
+          "pulseaudio"
+          "custom/separatorL"
+          "backlight"
+          "custom/separatorL"
+          "network"
+          "custom/separatorL"
+          "hyprland/language"
          ];
         modules-center = [
           "hyprland/workspaces"

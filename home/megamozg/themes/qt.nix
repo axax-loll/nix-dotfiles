@@ -1,9 +1,9 @@
 {
 	qt = {
 		enable = true;
-		platformTheme.name = "kvantum";
-		style = {
-			name = "kvantum";
-		};
+		platformTheme.name = "gtk";
+		# style = {
+		#  name = "kvantum";
+		# };
 	};
 }

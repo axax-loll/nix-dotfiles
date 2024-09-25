@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 {
-	# imports = [ ./theme.nix ];
+	imports = [ ./theme.nix ];
 	programs.helix = {
 		enable = true;
 		defaultEditor = true;
@@ -18,7 +18,7 @@
 			};
 			editor.indent-guides = {
 				render = true;
-				character = "|";
+				character = "»";
 			};
 			editor.cursor-shape = {
 				insert = "bar";
