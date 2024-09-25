@@ -2,13 +2,12 @@
 {
 	imports = [
 		./hyprland
-		./swayfx
+		# ./swayfx
 		./terminals
 		./misc
 	];
 	home.packages = with pkgs; [
 		hyprcursor
-		swayfx
 		
 		kitty
 		
