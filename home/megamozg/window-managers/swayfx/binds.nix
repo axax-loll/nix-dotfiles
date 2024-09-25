@@ -50,8 +50,8 @@ in
 
 			"${m}+m" = "${ex} spotify";
 
-			"${m}+l" = "${ex} transmission-gtk";
-			"${m}+${s}+l" = "${ex} qbittorrent";
+			"${m}+t" = "${ex} transmission-gtk";
+			"${m}+${s}+t" = "${ex} qbittorrent";
 
 			"${m}+a" = "${ex} anicli-ru -q 720";
 

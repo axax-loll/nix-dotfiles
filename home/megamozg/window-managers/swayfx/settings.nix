@@ -8,11 +8,11 @@ let
 	pr = "Print";
 in
 {
-	wayland.windowManager.sway = {
-		config = with config.lib.stylix.colors; {
+	wayland.windowManager.sway = with config.lib.stylix.colors; {
+		config = {
 			input = { "*" = { xkb_layout = "us,ru"; xkb_options = "grp:caps_toggle"; }; };
 			startup = [
-				{ command = "${...}"; }
+				# { command = "${...}"; }
 			];
 		
 			modifier = "Mod4";
@@ -66,7 +66,11 @@ in
 					text = "#${base06}";
 				};
 				urgent = {
+					background = "#${base00}";
 					border = "#${base08}";
+					childBorder = "#${base0B}";
+					indicator = "#${base08}";
+					text = "#${base06}";
 				};
 			};
 		};

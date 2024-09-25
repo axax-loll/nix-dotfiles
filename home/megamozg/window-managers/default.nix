@@ -20,7 +20,7 @@
 		inputs.anyrun.packages."x86_64-linux".anyrun 
 		
 		grimblast
-		grimshot
+		# sway-contrib.grimshot
 		wf-recorder
 
 		light
