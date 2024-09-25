@@ -2,13 +2,13 @@
 {
 	imports = [
 		./hyprland
-		# ./swayfx
+		./swayfx
 		./terminals
 		./misc
 	];
 	home.packages = with pkgs; [
 		hyprcursor
-		# swayfx
+		swayfx
 		
 		kitty
 		
@@ -20,12 +20,12 @@
 		inputs.anyrun.packages."x86_64-linux".anyrun 
 		
 		grimblast
+		grimshot
 		wf-recorder
 
 		light
 		# swaylock
 		fprintd
-		grimblast
 		wl-clipboard
 		hyprpicker
 	];
