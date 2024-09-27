@@ -16,6 +16,8 @@ in
 
 		adw-gtk3
 	];
+
+	# PROGRAMS ENABLE
 	programs = {
 		fish.enable = true;
 		hyprland = {

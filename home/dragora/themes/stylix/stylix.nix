@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
-	imports = [ ./themes/base16.nix ];
+	imports = [
+		inputs.stylix.homeManagerModules.stylix
+		./themes/base16.nix
+	];
 	stylix = {
   		enable = true;
   		autoEnable = false;

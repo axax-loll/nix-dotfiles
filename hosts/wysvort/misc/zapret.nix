@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 {
-	# ZAPReT FOR YOUTUBE WORKING
+	# ZAPRET FOR YOUTUBE WORKING
 	systemd.services.zapret = {
 		after = [ "network-online.target" ];
 		wants = [ "network-online.target" ];

@@ -1,4 +1,37 @@
 {
+	outputs = { self, nixpkgs, home-manager, ... }@inputs:
+	let system = "x86_64-linux"; in 
+	{
+		# PC IN MY ROOM
+		nixosConfigurations = {
+			# PC HOST
+			karbur = nixpkgs.lib.nixosSystem {
+				specialArgs = { inherit system inputs; };
+				modules = [ ./hosts/karbur ];
+			};
+			# THINKPAD HOST
+			wysvort = nixpkgs.lib.nixosSystem {
+				specialArgs = { inherit system inputs; };
+				modules = [ ./hosts/wysvort ];
+			};
+		};
+		
+		homeConfigurations = {
+			# PC USER
+			dragora = home-manager.lib.homeManagerConfiguration {
+				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				extraSpecialArgs = { inherit inputs; };
+				modules = [ ./home/dragora ];
+			};
+			# THINKPAD USER
+			megamozg = home-manager.lib.homeManagerConfiguration {
+				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				extraSpecialArgs = { inherit inputs; };
+				modules = [ ./home/megamozg ];
+			};
+		};
+	};
+	
 	inputs = {
 		# REPOSITORIES NIXPKGS
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -7,8 +40,9 @@
 		
 		# ONE LINE SOFTWARE
 		ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
-		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+		flake-parts.url = "github:hercules-ci/flake-parts";
 		stylix.url = "github:danth/stylix";
 		
 		# TWO LINE SOFTWARE
@@ -49,53 +83,6 @@
 		hyprfocus = {
 			url = "github:pyt0xic/hyprfocus";
 			inputs.hyprland.follows = "hyprland";
-		};
-		fuji-wallpapers = {
-			type = "github";
-			owner = "axax-loll";
-			repo = "fuji-wallpapers";
-			flake = false;
-		};
-	};
-
-	outputs = { self, nixpkgs, nur, nixos-hardware, home-manager, stylix, nixvim, anyrun, spicetify-nix, ... }@inputs:
-	let
-		system = "x86_64-linux";
-		hpakag = nixpkgs.legacyPackages.${system};
-	in 
-	{
-		# PC IN MY ROOM
-		nixosConfigurations.karbur = nixpkgs.lib.nixosSystem {
-			specialArgs = { inherit system inputs; };
-			modules = [ 
-				./hosts/karbur
-				home-manager.nixosModules.home-manager
-				stylix.nixosModules.stylix
-				nur.nixosModules.nur
-			];
-		};
-		homeConfigurations.dragora = home-manager.lib.homeManagerConfiguration {
-			pkgs = nixpkgs.legacyPackages.x86_64-linux;
-			extraSpecialArgs = { inherit inputs spicetify-nix hpakag; };
-			modules = [ 
-				./home/dragora
-				spicetify-nix.homeManagerModules.default
-				anyrun.homeManagerModules.default
-				nixvim.homeManagerModules.nixvim
-				stylix.homeManagerModules.stylix
-				nur.hmModules.nur
-			];
-		};
-
-		# FUCKING THINKPAD T14 GEN1 OH MY GOOOOD (where?)
-		nixosConfigurations.wysvort = nixpkgs.lib.nixosSystem {
-			specialArgs = { inherit system inputs; };
-			modules = [ ./hosts/wysvort ];
-		};
-		homeConfigurations.megamozg = home-manager.lib.homeManagerConfiguration {
-			pkgs = nixpkgs.legacyPackages.x86_64-linux;
-			extraSpecialArgs = { inherit inputs spicetify-nix hpakag; };
-			modules = [ ./home/megamozg ];
 		};
 	};
 }

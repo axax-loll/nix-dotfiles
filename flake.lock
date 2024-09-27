@@ -322,6 +322,24 @@
     },
     "flake-parts_2": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1726153070,
+        "narHash": "sha256-HO4zgY0ekfwO5bX0QH/3kJ/h4KvUDFZg8YpkNwIbg1U=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "bcef6817a8b2aa20a5a6dbb19b43e63c5bf8619a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_3": {
+      "inputs": {
         "nixpkgs-lib": [
           "nixvim",
           "nixpkgs"
@@ -426,22 +444,6 @@
       "original": {
         "owner": "SenchoPens",
         "repo": "fromYaml",
-        "type": "github"
-      }
-    },
-    "fuji-wallpapers": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1726968648,
-        "narHash": "sha256-TXGxtcrIN4HzUoA2FDYnu10jLw22Kzu/XzK4oROC6mE=",
-        "owner": "axax-loll",
-        "repo": "fuji-wallpapers",
-        "rev": "1f2e62da68ed12b713a09e677ff679c0de661c51",
-        "type": "github"
-      },
-      "original": {
-        "owner": "axax-loll",
-        "repo": "fuji-wallpapers",
         "type": "github"
       }
     },
@@ -877,6 +879,18 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1725233747,
+        "narHash": "sha256-Ss8QWLXdr2JCBPcYChJhz4xJm+h/xjl4G0c0XlP6a74=",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/356624c12086a18f2ea2825fed34523d60ccc4e3.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/356624c12086a18f2ea2825fed34523d60ccc4e3.tar.gz"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1726320982,
@@ -945,7 +959,7 @@
       "inputs": {
         "devshell": "devshell",
         "flake-compat": "flake-compat",
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts_3",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",
         "nix-darwin": "nix-darwin",
@@ -1012,7 +1026,7 @@
         "anyrun": "anyrun",
         "ayugram-desktop": "ayugram-desktop",
         "firefox-addons": "firefox-addons",
-        "fuji-wallpapers": "fuji-wallpapers",
+        "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
         "hyprfocus": "hyprfocus",
         "hyprgrass": "hyprgrass",

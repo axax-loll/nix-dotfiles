@@ -1,6 +1,9 @@
 { config, pkgs, inputs, ... }:
 {
-	imports = [ inputs.stylix.homeManagerModules.stylix ./themes/paradise.nix ];
+	imports = [
+		inputs.stylix.homeManagerModules.stylix
+		./themes/paradise.nix
+	];
 	stylix = {
   		enable = true;
   		autoEnable = false;
