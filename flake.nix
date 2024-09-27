@@ -75,6 +75,7 @@
 			];
 		};
 		homeConfigurations.dragora = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.x86_64-linux;
 			extraSpecialArgs = { inherit inputs spicetify-nix hpakag; };
 			modules = [ 
 				./home/dragora

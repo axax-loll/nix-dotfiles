@@ -2,7 +2,7 @@
 {
 	# UNGOOGLED CHROMIUM
 	programs.chromium = {
-		enable = true;
+		enable = false;
 		package = pkgs.ungoogled-chromium;
 		extensions = [
 			{ id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # DARK READER

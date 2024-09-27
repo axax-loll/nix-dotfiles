@@ -18,5 +18,12 @@
 		starship
 		fastfetch
 		pulsemixer
+
+		nvtopPackages.amd
+		btop
+
+		bluetuith
+		tenki
+		inxi
 	];
 }

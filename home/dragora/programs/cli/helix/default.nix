@@ -18,7 +18,7 @@
 			};
 			editor.indent-guides = {
 				render = true;
-				character = "|";
+				character = "»";
 			};
 			editor.cursor-shape = {
 				insert = "bar";

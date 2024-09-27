@@ -7,6 +7,7 @@
 		vesktop
 		
 		qbittorrent-enhanced
+		transmission_4-gtk
 		openvpn
 		uget
 		
@@ -30,6 +31,7 @@
 		
 		blockbench
 		bottles
+		# superTuxKart
 		mindustry-wayland
 		
 		(prismlauncher.override {

@@ -3,6 +3,7 @@
 	# NIX SETTINGS
 	nix = {
 		settings = {
+			warn-dirty = false;
 			experimental-features = [ "nix-command" "flakes" ];
 			substituters = [
 				"https://cache.garnix.io"
