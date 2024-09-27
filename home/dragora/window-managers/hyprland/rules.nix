@@ -2,15 +2,13 @@
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
 		windowrulev2 = [
-			"rounding 8, floating:1"
-			"noshadow, floating:0"
-			"noanim, floating:0"
+			# "rounding 8, floating:1"
+			# "noshadow, floating:0"
+			# "noanim, floating:0"
 
-			"workspace 2 silent, class:^(firedragon)$"
-			"workspace 2 silent, class:^(Vivaldi-stable)$" # XORG
-			"workspace 2 silent, class:^(vivaldi-stable)$"
+			"workspace 2 silent, class:^(firefox)$"
 			"workspace 3 silent, class:^(Spotify)$"
-			"workspace 4 silent, class:^(64Gram)$"
+			"workspace 4 silent, class:^(com.ayugram)$"
 			"workspace 4 silent, class:^(vesktop)$"
 			"workspace 5 silent, class:^(obsidian)$"
 			"workspace 6 silent, class:^(anicli)$"
@@ -24,7 +22,7 @@
 			"move center, class:^(tfm)$"
 
 			"float, title:^(Media viewer)$"
-			"maximize, title:^(Media viewer)$"
+			"fullscreen, title:^(Media viewer)$"
 			"size 670 540, title:^(Media viewer)$"
 
 			"float, class:^(xdg-desktop-portal-gtk)$"

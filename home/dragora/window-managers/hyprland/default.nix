@@ -1,9 +1,15 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, ... }: 
+let
+	hpkg = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system};
+in
 {
- 	wayland.windowManager.hyprland = {
+	imports = [ ./binds.nix ./rules.nix ./settings.nix ];
+	wayland.windowManager.hyprland = {
 	  	enable = true;
+		package = hpkg.hyprland;
 		xwayland.enable = true;
 		systemd.enable = true;
 	};
-	imports = [ ./binds.nix ./rules.nix ./settings.nix ];
+	home.packages = with pkgs; [
+	];
 }

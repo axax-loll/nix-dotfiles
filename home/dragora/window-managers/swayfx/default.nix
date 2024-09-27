@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+	imports = [ ./binds.nix ./settings.nix ];
 	wayland.windowManager.sway = {
 		enable = true;
 		xwayland = true;
@@ -7,5 +8,4 @@
 
 		package = pkgs.swayfx;
 	};
-	imports = [ ./binds.nix ./settings.nix ];
 }

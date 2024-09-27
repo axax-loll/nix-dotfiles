@@ -29,10 +29,16 @@
 		"kitty_mod+up" = "resize_window taller";
 		"kitty_mod+down" = "resize_window shorter";
 		"kitty_mod+home" = "resize_window reset";
+
+		"kitty_mod+h" = "resize_window narrower";
+		"kitty_mod+l" = "resize_window wider";
+		"kitty_mod+k" = "resize_window taller";
+		"kitty_mod+j" = "resize_window shorter";
+		"kitty_mod+g" = "resize_window reset";
 		
 		"kitty_mod+r" = "load_config_file";
 		"kitty_mod+t" = "set_tab_title";
-		"kitty_mod+l" = "next_layout";
+		"kitty_mod+i" = "next_layout";
 		"kitty_mod+u" = "kitten unicode_input";
 		"kitty_mod+escape" = "kitty_shell overlay";
 		"kitty_mod+]" = "next_window";
