@@ -39,7 +39,8 @@
 			ga = "git add .";
 			gA = "git add";
 			gc = "git commit -m";
-			gC = "git commit -m update  ";
+			gC = "git commit -m update";
+			gW = "git commit -m 'add walls'";
 			gp = "git push";
 			gP = "git pull";
 			
