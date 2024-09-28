@@ -9,10 +9,10 @@
     hash = "sha256-VQ8JNtLT+UMTAkek9pJ8fqXUW+E6s4XGwJ9rwqwASIQ=";
   };
 
-  # LD_LIBRARY_PATH = lib.makeLibraryPath [ pkgs.tdlib ];
+  LD_LIBRARY_PATH = lib.makeLibraryPath [ pkgs.tdlib ];
   RUST_BACKTRACE = 1;
-  LOCAL_TDLIB_PATH = "${pkgs.tdlib}/lib";
-  # buildFeatures = [ "local-tdlib" ];
+
+  buildFeatures = [ "download-tdlib" ];
 
   nativeBuildInputs = with pkgs; [ pkg-config openssl tdlib ];
   buildInputs = with pkgs; [ pkg-config openssl tdlib ];
@@ -24,7 +24,8 @@
     homepage = "https://github.com/FedericoBruzzone/tgt";
     changelog = "https://github.com/FedericoBruzzone/tgt/releases/tag/v${version}";
     license = licenses.mit;
-    maintainers = with maintainers; [ somokill azikx ];
+    maintainers = with maintainers; [ somokill ];
     main_program = "tgt";
   };
 }
+

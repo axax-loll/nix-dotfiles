@@ -44,6 +44,7 @@
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		stylix.url = "github:danth/stylix";
+		yazi.url = "github:sxyazi/yazi";
 		
 		# TWO LINE SOFTWARE
 		home-manager = {

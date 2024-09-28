@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, yazi, ... }:
 {
 	home.packages = with pkgs; [
-		yazi
+		fff
 		joshuto
 		
 		bat
@@ -12,10 +12,12 @@
 		
 		micro
 		helix
-		
+
+		inxi
 		zoxide
 		starship
 		fastfetch
+		cpufetch
 		pulsemixer
 
 		openvpn
@@ -25,15 +27,13 @@
 		btop
 		
 		bluetuith
-		ytfzf
-		rustmission
-		tty-clock
 		confetty
 		tenki
 		light
 
-		trash-cli
-		inxi
+		# trash-cli
+		trashy
+		fuc
 
 		# ferium
 		# portablemc

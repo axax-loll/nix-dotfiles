@@ -3,11 +3,13 @@
 	wayland.windowManager.hyprland.settings = {
 		# SHORTCUTS
 		"$m" = "SUPER";
-		"$rt" = "Return";
-		"$sp" = "SPACE";
 		"$s" = "SHIFT";
 		"$a" = "ALT";
-		"$t" = "Tab";
+		"$c" = "CTRL";
+
+		"$rt" = "RETURN";
+		"$sp" = "SPACE";
+		"$tb" = "TAB";
 		
 		"$nx" = "Next";
 		"$pr" = "Prior";
@@ -54,8 +56,8 @@
 			"$m, $rt, exec, kitty -T Terminal"
 			"$m  $s, $rt, exec, kitty --class=termfloat -T Terminal"
 			
-			"$m, $t, exec, nwg-drawer -ovl -nocats -nofs -d -c 7 -mb -49"
-			"$m  $s, $t, exec, anyrun"
+			"$m, $tb, exec, nwg-drawer -ovl -nocats -nofs -d -c 7 -mb -49"
+			"$m  $s, $tb, exec, anyrun"
 			
 			"$m, V, exec, ayugram-desktop"
 			"$m  $s, V, exec, vesktop"
@@ -93,50 +95,38 @@
 
 		# HOLDING BUTTONS
 		binde = [
-			# RESIZE WINDOW
-			"$m, left, resizeactive, -50 0"
-			"$m, right, resizeactive, 50 0"
-			"$m, up, resizeactive, 0 -50"
-			"$m, down, resizeactive, 0 50"
+			# HJKL
+			"$m, H, movefocus, l"
+			"$m, J, movefocus, d"
+			"$m, K, movefocus, u"
+			"$m, L, movefocus, r"
 			
-			"$m, H, resizeactive, -50 0"
-			"$m, L, resizeactive, 50 0"
-			"$m, K, resizeactive, 0 -50"
-			"$m, J, resizeactive, 0 50"
+			"$m $s, H, swapwindow, l"
+			"$m $s, J, swapwindow, d"
+			"$m $s, K, swapwindow, u"
+			"$m $s, L, swapwindow, r"
 
-			# MOVE WINDOW
-			"$m $s, right, moveactive, 50 0"
-			"$m $s, left, moveactive, -50 0"
-			"$m $s, up, moveactive, 0 -50"
-			"$m $s, down, moveactive, 0 50"
+			"$m $a, H, resizeactive, -50 0"
+			"$m $a, J, resizeactive, 0 50"
+			"$m $a, K, resizeactive, 0 -50"
+			"$m $a, L, resizeactive, 50 0"
+
+			# ARROWS
+			"$m, left, movefocus, l"
+			"$m, down, movefocus, d"
+			"$m, up, movefocus, u"
+			"$m, right, movefocus, r"
 			
-			"$m $s, H, moveactive, 50 0"
-			"$m $s, L, moveactive, -50 0"
-			"$m $s, K, moveactive, 0 -50"
-			"$m $s, J, moveactive, 0 50"
+			"$m $s, left, swapwindow, l"
+			"$m $s, down, swapwindow, d"
+			"$m $s, up, swapwindow, u"
+			"$m $s, right, swapwindow, r"
 
-			# FOCUS WINDOW
-			"$m $a, left, movefocus, l"
-			"$m $a, right, movefocus, r"
-			"$m $a, up, movefocus, u"
-			"$m $a, down, movefocus, d"
+			"$m $a, left, resizeactive, -50 0"
+			"$m $a, down, resizeactive, 0 50"
+			"$m $a, up, resizeactive, 0 -50"
+			"$m $a, right, resizeactive, 50 0"
 			
-			"$m $a, H, movefocus, l"
-			"$m $a, L, movefocus, r"
-			"$m $a, K, movefocus, u"
-			"$m $a, J, movefocus, d"
-
-			# SWAP WINDOW
-			"$m $c, left, swapwindow, l"
-			"$m $c, right, swapwindow, r"
-			"$m $c, up, swapwindow, u"
-			"$m $c, down, swapwindow, d"
-			
-			"$m $c, H, swapwindow, l"
-			"$m $c, L, swapwindow, r"
-			"$m $c, K, swapwindow, u"
-			"$m $c, J, swapwindow, d"
-
 			# BRIGHTNESS
 			", XF86MonBrightnessDown, exec, doas light -U 10"
 			", XF86MonBrightnessUp, exec, doas light -A 10"

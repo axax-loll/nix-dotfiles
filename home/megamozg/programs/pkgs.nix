@@ -3,10 +3,11 @@
 	home.packages = with pkgs; [
 		home-manager
 		
+		tuba
+		amberol
+		cassette
 		vesktop
-		
 		qbittorrent-enhanced
-		openvpn
 		
 		xdg-user-dirs
 		libreoffice-fresh

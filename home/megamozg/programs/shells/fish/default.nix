@@ -5,6 +5,9 @@
 			e = "$EDITOR";
 			sudo = "doas";
 			
+			cp = "cpz";
+			rm = "rmz";
+			
 			c = "clear";
 			x = "exit";
 			
