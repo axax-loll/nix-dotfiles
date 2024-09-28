@@ -1,6 +1,6 @@
 {
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
-	let system = "x86_64-linux"; in 
+	let system = "x86_64-linux"; in
 	{
 		# PC IN MY ROOM
 		nixosConfigurations = {
