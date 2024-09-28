@@ -2,14 +2,37 @@
 {
 	# BOOT PARAMETERS
 	boot = {
-		kernelPackages = pkgs.linuxPackages_cachyos;
+		consoleLogLevel = 0;
+		kernelPackages = pkgs.linuxPackages_xanmod_latest;
 		kernelModules = [ "kvm-amd" ];
 		extraModulePackages = [ ];
+		kernelParams = [
+			"quiet"
+			"loglevel=3"
+			"rd.systemd.show_status=false"
+		];
 		
-		loader.systemd-boot.enable = true;
-		loader.efi.canTouchEfiVariables = true;
-		
-		initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-		initrd.kernelModules = [ ];
+		loader = {
+			systemd-boot = {
+				enable = true;
+				configurationLimit = 4;
+			};
+			efi.canTouchEfiVariables = true;
+			timeout = 0;
+		};
+
+		initrd = {
+			kernelModules = [ ];
+			availableKernelModules = [
+				"xhci_pci"
+				"ahci"
+				"usbhid"
+				"usb_storage"
+				"sd_mod"
+			];
+			systemd.enable = true;
+			kernelModules = [ ];
+		};
+		tmp.cleanOnBoot = true;
 	};
 }
