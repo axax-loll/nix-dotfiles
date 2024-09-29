@@ -55,11 +55,11 @@
 			bold = true;
 		};
 		tabs.chars = {
-			active_prefix = " ";
-			active_postfix = " ";
-			inactive_prefix = " ";
+			active_prefix = "[";
+			active_postfix = "]";
+			inactive_prefix = " ";
 			inactive_postfix = "";
-			divider = " ";
+			divider = " | ";
 			scroll_front_prefix = "";
 			scroll_front_postfix = "";
 			scroll_front_prestring = "« ";
