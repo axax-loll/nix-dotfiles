@@ -11,6 +11,6 @@
 		./micro
 		./git
 		./helix
-		./joshuto
+		./joshuto/cust.nix
 	];
 }

@@ -25,7 +25,7 @@
 		
 		nvtopPackages.amd
 		btop
-		
+
 		bluetuith
 		confetty
 		tenki
