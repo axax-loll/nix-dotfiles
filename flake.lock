@@ -431,6 +431,24 @@
         "type": "github"
       }
     },
+    "flake-utils_5": {
+      "inputs": {
+        "systems": "systems_6"
+      },
+      "locked": {
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -955,6 +973,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1722415718,
+        "narHash": "sha256-5US0/pgxbMksF92k1+eOa8arJTJiPvsdZj9Dl+vJkM4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c3392ad349a5227f4a3464dce87bcc5046692fce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -1038,7 +1072,30 @@
         "nixvim": "nixvim",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "yazi": "yazi"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "yazi",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721441897,
+        "narHash": "sha256-gYGX9/22tPNeF7dR6bWN5rsrpU4d06GnQNNgZ6ZiXz0=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "b7996075da11a2d441cfbf4e77c2939ce51506fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "b7996075da11a2d441cfbf4e77c2939ce51506fd",
+        "type": "github"
       }
     },
     "spicetify-nix": {
@@ -1167,6 +1224,21 @@
         "type": "github"
       }
     },
+    "systems_6": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
@@ -1223,6 +1295,26 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yazi": {
+      "inputs": {
+        "flake-utils": "flake-utils_5",
+        "nixpkgs": "nixpkgs_5",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1727455294,
+        "narHash": "sha256-WSSLsNJw4ABnaXjs/lVcCea1d/YF6ko+OZ3TElIEg+E=",
+        "owner": "sxyazi",
+        "repo": "yazi",
+        "rev": "3e4973dbbfa7d34a95b6005822db84db51ebddb7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sxyazi",
+        "repo": "yazi",
         "type": "github"
       }
     }

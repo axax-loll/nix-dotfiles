@@ -3,9 +3,6 @@
 	home.packages = with pkgs; [
 		home-manager
 		
-		tuba
-		amberol
-		cassette
 		vesktop
 		qbittorrent-enhanced
 		

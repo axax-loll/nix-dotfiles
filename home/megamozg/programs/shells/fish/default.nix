@@ -28,15 +28,18 @@
 			
 			r = "ranger";
 			y = "yazi";
+			j = "joshuto";
+			nxt = "nix-tree";
 			
 			m = "micro";
 			v = "nvim";
 			h = "hx";
 			
-			ff = "fastfetch";
-			ca = "cava";
-			pm = "pulsemixer";
-			bt = "bluetuith";
+			fsf = "fastfetch";
+			cpf = "cpufetch";
+			cav = "cava";
+			pmx = "pulsemixer";
+			blt = "bluetuith";
 
 			gl = "git clone";
 			ga = "git add .";
@@ -46,9 +49,13 @@
 			gp = "git push";
 			gP = "git pull";
 			
-			lut = "lutgen apply -p mountain-fuji";
-			lutall = "lutgen apply -p mountain-fuji ./*";
+			lut = "lutgen apply -p paradise";
+			lutall = "lutgen apply -p paradise ./*";
 			icat = "kitten icat";
+
+			ter = "tenki --mode rain --wind disable --timer-color cyan -f 80";
+			tes = "tenki --mode snow --wind disable --timer-color yellow -f 80";
+			tem = "tenki --mode meteor --wind disable --timer-color red -f 80";
 		};
 		interactiveShellInit = ''
 			set fish_greeting

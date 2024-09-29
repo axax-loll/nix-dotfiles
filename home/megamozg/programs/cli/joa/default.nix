@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-	imports = [ ./theme.nix ./mime.nix ];
+	imports = [ ./mime.nix ./theme.nix ./binds.nix ];
 	programs.joshuto = {
 		enable = true;
 		settings = {
@@ -15,7 +15,7 @@
 			zoxide_update = true;
 			display = {
 				mode = "default";
-				automatically_count_files = false;
+				automatically_count_files = true;
 				collapse_preview = true;
 				column_ratio = [1 4 4];
 				scroll_offset = 6;

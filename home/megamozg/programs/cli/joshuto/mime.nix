@@ -17,6 +17,8 @@
       ];
     };
 
+    text = { "inherit" = "text_default"; };
+    
     extensions = {
       # OFFICE
       odt."inherit" = "libreoffice_default";

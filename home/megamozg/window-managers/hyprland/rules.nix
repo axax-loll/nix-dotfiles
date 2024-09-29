@@ -28,6 +28,7 @@
 			"float, class:^(xdg-desktop-portal-gtk)$"
 			"size 807 570, class:^(xdg-desktop-portal-gtk)$"
 
+			"nodim, class:^(mpv)$"
 			"float, class:^(anicliru)$"
 			"size 660 630, class:^(anicliru)$"
 			"bordercolor rgb(${base08}) rgb(${base09}) 45deg, class:^(anicliru)$"

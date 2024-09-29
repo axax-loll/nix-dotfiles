@@ -1,6 +1,6 @@
 {
 	imports = [
-		# ./spotify
+		./spotify
 		# ./chromium
 		./firefox
 		# `./anyrun
