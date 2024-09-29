@@ -2,34 +2,26 @@
 {
 	# SERVICES ANY PROGRAM
 	services = {
-		# SERVICES WITH SETTINGS
-		getty = {
-			autologinUser = "megamozg";
-			# greetingLine = "";
-		};
-		xserver = {
+		getty.autologinUser = "megamozg";
+		xserver = { # XORG?
 			xkb = {
     			layout = "us";
     			variant = "qwerty";
     			options = "grp:caps_toggle";
 			};
-			displayManager.gdm = {
-				enable = false;
-				wayland = true;
-			};
 		};
-		tailscale = {
+		tailscale = { # OWN VPN NETWORK
 			enable = true;
 			useRoutingFeatures = "both";
 		};
-		system76-scheduler = {
+		system76-scheduler = { # PERFORMANCEE
 			enable = true;
 			settings = {
 				cfsProfiles.enable = true;
 				processScheduler.pipewireBoost.enable = true;
 			};
 		};
-		fprintd = {
+		fprintd = { # FINGER PRINT
 			enable = true;
 			package = pkgs.fprintd-tod;
 			tod = {
@@ -37,22 +29,12 @@
 				driver = pkgs.libfprint-2-tod1-vfs0090;
 			};
 		};
-		# greetd = {
-		# 	enable = false;
-		# 	package = pkgs.greetd.regreet;
-		# 	settings = {
-		# 		default_session = {
-		# 			command = "cage -s regreet";
-		# 			user = "megamozg";
-		# 		};
-		# 	};
-		# };
-		transmission = {
+		transmission = { # TORRENT
 			enable = true;
 			package = pkgs.transmission_4;
 			openRPCPort = true;
 		};
-		tlp = {
+		tlp = { # BATTERY
 			enable = true;
 			settings = {
 				TLP_DEFAULT_MODE = "BAT";
@@ -81,21 +63,7 @@
 				USB_AUTOSUSPEND = 0;
 			};
 		};
-		auto-cpufreq = {
-			enable = true;
-			settings = {
-				battery = {
-					governor = "powersave";
-					turbo = "never";
-				};
-				charger = {
-					governor = "performance";
-					turbo = "auto";
-				};
-			};
-		};
 
-		# SIMPLE SERVICES
 		dbus.implementation = "broker";
 		upower.enable = true;
 		thermald.enable = true;

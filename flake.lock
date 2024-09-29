@@ -75,6 +75,26 @@
         "type": "github"
       }
     },
+    "auto-cpufreq": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726162350,
+        "narHash": "sha256-SI2pDWGKqRJh48wGLovsVT4xPXTZZjM2zaOP3HpUPTE=",
+        "owner": "AdnanHodzic",
+        "repo": "auto-cpufreq",
+        "rev": "7b03630a5e094fc2ef58492d6be35bf64c387815",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AdnanHodzic",
+        "repo": "auto-cpufreq",
+        "type": "github"
+      }
+    },
     "ayugram-desktop": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -1058,6 +1078,7 @@
       "inputs": {
         "Hyprspace": "Hyprspace",
         "anyrun": "anyrun",
+        "auto-cpufreq": "auto-cpufreq",
         "ayugram-desktop": "ayugram-desktop",
         "firefox-addons": "firefox-addons",
         "flake-parts": "flake-parts_2",

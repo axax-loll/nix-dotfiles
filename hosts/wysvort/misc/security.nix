@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
-	# SUDO AND DOAS FOR ROOT ACCESS
 	security = {
-		sudo.enable = true;
-		doas = {
+		sudo = { # FUCKING CRAP
+			enable = true;
+		};
+		doas = { # VERY TOP
 			enable = true;
 			wheelNeedsPassword = true;
 			extraRules = [
@@ -18,11 +19,13 @@
 				permit nopass megamozg as root cmd tee
 			'';
 		};
-		pam = {
+		pam = { # SOMTHING WITH FPRINT
 			services = {
 				swaylock.fprintAuth = true;
 			};
 		};
-		polkit.enable = true;
+		polkit = {
+			enable = true;
+		};
 	};
 }

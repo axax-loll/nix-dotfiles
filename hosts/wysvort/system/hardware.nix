@@ -2,17 +2,16 @@
 {
 	imports = [ "${inputs.nixos-hardware}/lenovo/thinkpad/t14/amd/gen1" ];
 	hardware = {
-		# BLUETOOTH
-		bluetooth = {
+		bluetooth = { # BT
 			enable = true;
 			powerOnBoot = true;
 		};
-		graphics = {
+		graphics = { # GPU
 			enable = true;
 			enable32Bit = true;
 			extraPackages = with pkgs; [
 				amdvlk
-				# rocmPackages.clr.icd
+				rocmPackages.clr.icd
 				# vaapiVdpau
 				# libvdpau-va-gl
 			];

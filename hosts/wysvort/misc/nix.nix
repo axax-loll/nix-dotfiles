@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-	# NIX SETTINGS
-	nix = {
+	nix = { # NIX SETTINGS
 		settings = {
 			warn-dirty = false;
 			experimental-features = [ "nix-command" "flakes" ];
@@ -17,10 +16,12 @@
 			];
 		};
 	};
-	
-	# NIXPKGS SETTINGS
-	nixpkgs.config = {
-		allowBroken = true;
-		allowUnfree = true;
+
+	nixpkgs = {
+		hostPlatform = lib.mkDefault "x86_64-linux";
+		config = { # NIXPKGS SETS
+			allowBroken = true;
+			allowUnfree = true;
+		};
 	};
 }

@@ -5,7 +5,7 @@
 		inputs.stylix.nixosModules.stylix
 		./paradise.nix
 	];
-	stylix = {
+	stylix = { # COLORIZE !!!
 		enable = true;
 		autoEnable = false;
 		targets = {
@@ -13,7 +13,7 @@
 			nixos-icons.enable = true; # ICONS
 			chromium.enable = true; # CHROMIUM LOL
 			fish.enable = true; # SHELL
-			plymouth = {
+			plymouth = { # STARTING SCREEN
 				enable = true;
 				logoAnimated = true;
 			};

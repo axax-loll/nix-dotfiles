@@ -9,7 +9,7 @@ in
 	environment.systemPackages = with pkgs; [
 		nh git fish
 		doas micro
-		zapret
+		zapret lact
 		hyprland light
 		home-manager
 		greetd.regreet

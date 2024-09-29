@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 	# BOOT PARAMETERS
-	boot = {
+	boot = { # ITSELF LOL
 		kernelPackages = pkgs.linuxPackages_xanmod_latest;
 		kernelModules = [ "kvm-amd" ];
 		consoleLogLevel = 0;
@@ -18,7 +18,7 @@
 			"amdgpu.gttsize=2000"
 		];
 		
-		loader = {
+		loader = { # SYSTEMD BOOT AS DEFAULT
 			systemd-boot = {
 				enable = true;
 				configurationLimit = 4;
@@ -27,7 +27,7 @@
 			timeout = 0;
 		};
 		
-		initrd = {
+		initrd = { # IDK
 			availableKernelModules = [
 				"nvme"
 				"xhci_pci"
@@ -47,7 +47,7 @@
 			verbose = false;
 		};
 
-		plymouth = {
+		plymouth = { # PLYMOUTH WITH NIXOS LOGO
 			enable = true;
 			logo = "${pkgs.nixos-icons}/share/icons/hicolor/48x48/apps/nix-snowflake-white.png";
 		};

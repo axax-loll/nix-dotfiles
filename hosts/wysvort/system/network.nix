@@ -3,7 +3,7 @@
 	# NETWORKING
 	networking = {
 		hostName = "wysvort";
-		networkmanager = {
+		networkmanager = { # NETWORK MANAGER
   			enable = true;
   			insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
 			wifi.powersave = true;

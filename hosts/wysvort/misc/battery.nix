@@ -2,7 +2,7 @@
 {
 	# SOMETHING FOR BATTERY
 	powerManagement = {
-		enable = false;
-		powertop.enable = false;
+		enable = true;
+		powertop.enable = true;
 	};
 }
