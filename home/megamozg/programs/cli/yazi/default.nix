@@ -2,7 +2,7 @@
 {
   programs.yazi = {
 	  enable = true;
-	  package = yazi.packages.${pkgs.system}.default;
+	  package = inputs.yazi.packages.${pkgs.system}.default;
     settings = {
       manager = {
         ratio = [ 1 4 4 ];
@@ -11,7 +11,7 @@
         sort_dir_first = true;
         sort_reverse = false;
         linemode = "size";
-        show_symlink = "true";
+        show_symlink = true;
       };
       preview = {
         wrap = "yes";
@@ -23,16 +23,16 @@
 	        { run = "nvim '$@'"; block = true; for = "unix"; }
         ];
         play = [
-	        { run = "mpv '$@'"; orphan = true; for = "unix" }
+	        { run = "mpv '$@'"; orphan = true; for = "unix"; }
         ];
         open = [
-	        { run = "xdg-open '$@'"; desc = "Open" }
+	        { run = "xdg-open '$@'"; desc = "Open"; }
         ];
       };
       open = {
         rules = [
-          { mime = "text/*"; use = "edit" }
-          { mime = "video/*"; use = "play" }
+          { mime = "text/*"; use = "edit"; }
+          { mime = "video/*"; use = "play"; }
         ];
       };
     };

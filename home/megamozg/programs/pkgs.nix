@@ -17,6 +17,7 @@
 		
 		obs-studio
 		obsidian
+		inkscape
 		
 		popsicle
 		ventoy

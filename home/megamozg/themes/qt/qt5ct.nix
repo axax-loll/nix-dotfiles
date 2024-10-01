@@ -2,10 +2,10 @@
 {
   xdg.configFile = {
     "qt5ct/colors/paradise.conf".text = ''
-      [ColorScheme]
-        active_colors=#ffe8e3e3, #ff1f1f1f, #ff151515, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff151515, #ff151515, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #801f1f1f
-        disabled_colors=#ff808080, #ff1f1f1f, #ff151515, #ff151515, #ff424242, #ff6e738d, #ff808080, #ffe8e3e3, #ff808080, #ff151515, #ff1f1f1f, #ff151515, #ff151515, #ff808080, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #801f1f1f
-        inactive_colors=#ffe8e3e3, #ff1f1f1f, #ff151515, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff151515, #ff151515, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #801f1f1f
+	  [ColorScheme]
+	    active_colors=#ffe8e3e3, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ffbbb6b6, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
+	    disabled_colors=#ff808080, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ff808080, #ffe8e3e3, #ff808080, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ff808080, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
+	    inactive_colors=#ffe8e3e3, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ffbbb6b6, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
     '';
     "qt5ct/qt5ct.conf".text = ''
       [Appearance]

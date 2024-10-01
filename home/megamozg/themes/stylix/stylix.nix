@@ -40,7 +40,7 @@
 			kitty = { enable = true; variant256Colors = false; };
 			gtk.enable = true;
 			kde.enable = true;
-			helix.enable = true;
+			# helix.enable = true;
 			nixvim.enable = true;
 			yazi.enable = true;
 			fzf.enable = true;

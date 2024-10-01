@@ -1,6 +1,6 @@
 {
 	imports = [
-		./themes
+		./themes/stylix.nix
 		./system
 		./misc
 	];

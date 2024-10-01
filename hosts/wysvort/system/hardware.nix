@@ -11,7 +11,7 @@
 			enable32Bit = true;
 			extraPackages = with pkgs; [
 				amdvlk
-				rocmPackages.clr.icd
+				# rocmPackages.clr.icd
 				# vaapiVdpau
 				# libvdpau-va-gl
 			];

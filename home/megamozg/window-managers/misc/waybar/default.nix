@@ -1,8 +1,4 @@
 { config, ... }:
-let
-  terminal = "kitty";
-  fileman = "joshuto";
-in
 {
   imports = [ ./style.nix ];
   programs.waybar = with config.lib.stylix.colors; {
@@ -28,6 +24,8 @@ in
           "hyprland/workspaces"
         ];
         modules-right = [
+          "tray"
+          "custom/separatorR"
           "disk"
           "custom/separatorR"
           "clock#time"
@@ -69,9 +67,9 @@ in
         "network" = {
           format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           format-wifi = "{icon} CON";
-          format-ethernet = "󰈀";
-          format-disconnected = "⚠";
-          on-click = "nmtui";
+          format-ethernet = "󰈀 ETH";
+          format-disconnected = "⚠ ERR";
+          on-click = "kitty nmtui";
           interval = 5;
           tooltip = false;
         };
@@ -130,7 +128,6 @@ in
           interval = 30;
           path = "/";
           unit = "GB";
-          on-click-middle = "${terminal} ${fileman}";
           tooltip = false;
         };
         "clock#time" = {
