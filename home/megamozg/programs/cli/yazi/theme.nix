@@ -1,31 +1,41 @@
-{ ... }:
+{ lib, ... }:
 {
-  programs.yazi.theme = {
+  programs.yazi.theme = lib.mkForce {
+    manager = {
+      cwd = { fg = "green"; };
+      
+      hovered = { fg = "black"; bg = "blue"; bold = true; };
+      preview_hovered = { underline = true; };
+
+      tab_active = { fg = "red"; bg = "black"; };
+      tab_inactive = { fg = "black"; bg = "white"; };
+
+      border_style = { fg = "black"; };
+
+      marker_selected = { bg = "cyan"; };
+      marker_copied = { bg = "green"; };
+      marker_cut = { bg = "yellow"; };
+    };
+    which = {
+      cols = 1;
+      mask = { bg = "grey"; };
+    };
     filetype = {
       rules = [
         { mime = "image/*"; fg = "green"; }
-        { mime = "{audio,video}/*"; fg = "yellow"; }
-        { mime = "application/x-bzip"; fg = "" }
-        { mime = "application/{odt,pdf,doc,docx,rtf,vnd.*}"; fg = "cyan"; }
-        { name = "*"; is = "orphan"; bg = "red"; }
-        { name = "*"; is = "exec"; bg = "green"; }
-      	{ name = "*"; is = "dummy"; bg = "red"; }
-        { name = "*/"; is = "dummy"; bg = "red"; }
-        { name = "*/"; fg = "blue"; }
-      ];
-      dirs  = [
-	      { name = ".config"; text = "" }
-	      { name = ".git"; text = "" }
-	      { name = "Desktop"; text = "" }
-	      { name = "Development"; text = "" }
-	      { name = "Documents"; text = "" }
-	      { name = "Downloads"; text = "" }
-	      { name = "Library"; text = "" }
-	      { name = "Movies"; text = "" }
-	      { name = "Music"; text = "" }
-	      { name = "Pictures"; text = "" }
-	      { name = "Public"; text = "" }
-	      { name = "Videos"; text = "" }
+        { mime = "video/*"; fg = "red"; }
+        { mime = "audio/*"; fg = "yellow"; }
+
+      	{ mime = "application/zip"; fg = "cyan"; }
+	      { mime = "application/gzip"; fg = "cyan"; }
+	      { mime = "application/x-tar"; fg = "cyan"; }
+	      { mime = "application/x-bzip"; fg = "cyan"; }
+	      { mime = "application/x-bzip2"; fg = "cyan"; }
+	      { mime = "application/x-7z-compressed"; fg = "cyan"; }
+	      { mime = "application/x-rar"; fg = "cyan"; }
+
+        { name = "*"; fg = "white"; }
+        { name = "*/"; fg = "white"; }
       ];
     };
   };

@@ -1,5 +1,11 @@
 { pkgs, inputs, ... }:
 {
+  imports = [
+    ./binds.nix
+    ./theme.nix
+    ./lua.nix
+    ./plugins.nix
+  ];
   programs.yazi = {
 	  enable = true;
 	  package = inputs.yazi.packages.${pkgs.system}.default;
@@ -20,13 +26,13 @@
       };
       opener = {
         edit = [
-	        { run = "nvim '$@'"; block = true; for = "unix"; }
+	        { run = "hx $@"; block = true; for = "unix"; }
         ];
         play = [
-	        { run = "mpv '$@'"; orphan = true; for = "unix"; }
+	        { run = "mpv $@"; orphan = true; for = "unix"; }
         ];
         open = [
-	        { run = "xdg-open '$@'"; desc = "Open"; }
+	        { run = "xdg-open $@"; desc = "Open"; }
         ];
       };
       open = {

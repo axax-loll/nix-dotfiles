@@ -1,16 +1,12 @@
 { ... }:
 {
   programs.yazi.keymap = {
-    input.keymap = [
-      { exec = "close"; on = [ "" ]; }
-      { exec = "close --submit"; on = [ "" ]; }
-      { exec = "escape"; on = [ "" ]; }
-      { exec = "backspace"; on = [ "" ]; }
-    ];
-    manager.keymap = [
-      { exec = "escape"; on = [ "" ]; }
-      { exec = "quit"; on = [ "q" ]; }
-      { exec = "close"; on = [ "" ]; }
-    ];
+    manager = {
+      prepend_keymap = [
+        { run = "plugin --sync smart-enter"; on = "l"; }
+        { run  = "plugin --sync max-preview"; on = "O"; }
+        { run  = "plugin --sync hide-preview"; on = "o"; }
+      ];
+    };
   };
 }

@@ -22,6 +22,7 @@
 
 		openvpn
 		nix-tree
+		nix-prefetch-github
 		
 		nvtopPackages.amd
 		btop

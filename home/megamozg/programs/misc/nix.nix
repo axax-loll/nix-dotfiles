@@ -5,6 +5,7 @@
 		settings = {
 			warn-dirty = false;
 			experimental-features = [ "nix-command" "flakes" ];
+			extra-experimental-features = [ "nix-command" "flakes" ];
 			builders-use-substitutes = true;
 			auto-optimise-store = true;
 			extra-substituters = [
