@@ -32,7 +32,5 @@
 		trayscale
 		
 	 	inputs.ayugram-desktop.packages.${pkgs.system}.default
-		(pkgs.callPackage ./custom-pkgs/anicliru/anicli-ru.nix { })
-		# (pkgs.callPackage ./custom-pkgs/tgt/tgt.nix { })
 	];
 }
