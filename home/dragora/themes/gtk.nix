@@ -15,8 +15,8 @@
 	gtk = {
 		enable = true;
 		iconTheme = {
-			name = "white";
-			package = pkgs.papirus-folders;
+			name = "Papirus-Dark";
+			package = pkgs.papirus-icon-theme;
 		};
 		font = lib.mkForce {
 			name = "JetBrainsMono NerdFont";

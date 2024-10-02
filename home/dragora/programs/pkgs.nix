@@ -27,7 +27,6 @@
 		# "wineWow64Packages.staging"
 		mindustry-wayland
 		mangohud
-		superTuxKart
 		transmission_4-gtk
 
 		trayscale

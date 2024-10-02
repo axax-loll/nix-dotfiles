@@ -1,9 +1,12 @@
 { pkgs, ... }:
+let
+	repo = "https://github.com/axax-loll/nix-wallpapers/blob/main";
+in
 {
 	stylix = {
 		image = pkgs.fetchurl {
-			url = "https://github.com/axax-loll/paradise-wallpapers/blob/main/car.jpeg?raw=true";
-			sha256 = "sha256-ptXa7uoCEys209fe6wnvT+k9ueeuOP8Tua/PlujTzas=";
+			url = "${repo}/bridge.jpg?raw=true";
+			sha256 = "sha256-D3eC61n2h0UPzy+zI3y08BA9mAmbJIBWB8Jq+yKXE5M=";
 		};
 		base16Scheme = {
 			base00 = "#151515";

@@ -9,7 +9,7 @@
     '';
     "qt5ct/qt5ct.conf".text = ''
       [Appearance]
-        color_scheme_path=/home/megamozg/.config/qt5ct/colors/paradise.conf
+        color_scheme_path=/home/dragora/.config/qt5ct/colors/paradise.conf
         custom_palette=true
         icon_theme=Papirus-Dark
         standard_dialogs=default

@@ -1,6 +1,6 @@
-{ ... }:
+{ config, ... }:
 {
-  xdg.configFile = with config.lib.stylix.colors; {
+  xdg.configFile = {
     # CONFIG FILE
     "qBittorrent/qBittorrent.conf".text = ''
       [AddNewTorrentDialog]
@@ -9,7 +9,7 @@
         DownloadPathHistory=
         Enabled=true
         RememberLastSavePath=false
-        SavePathHistory=/home/megamozg/Downloads
+        SavePathHistory=/home/dragora/Downloads
         SplitterState=@ByteArray(\0\0\0\xff\0\0\0\x1\0\0\0\x2\0\0\x1\xc6\0\0\x1\x83\0\xff\xff\xff\xff\x1\0\0\0\x1\0)
         TopLevel=true
         TreeHeaderState="@ByteArray(\0\0\0\xff\0\0\0\0\0\0\0\x1\0\0\0\0\0\0\0\0\x1\0\0\0\0\0\0\0\0\0\0\0\x6\x34\0\0\0\x3\0\0\0\x2\0\0\0\x64\0\0\0\x4\0\0\0\x64\0\0\0\x5\0\0\0\x64\0\0\x1,\0\0\0\x6\x1\x1\0\x1\0\0\0\0\0\0\0\0\0\0\0\0\x64\xff\xff\xff\xff\0\0\0\x81\0\0\0\0\0\0\0\x6\0\0\0\x64\0\0\0\x1\0\0\0\0\0\0\0\x64\0\0\0\x1\0\0\0\0\0\0\0\0\0\0\0\x1\0\0\0\0\0\0\0\x64\0\0\0\x1\0\0\0\0\0\0\0\0\0\0\0\x1\0\0\0\0\0\0\0\0\0\0\0\x1\0\0\0\0\0\0\x3\xe8\0\0\0\0\x64)"
@@ -20,7 +20,7 @@
         FileLogger\DeleteOld=true
         FileLogger\Enabled=true
         FileLogger\MaxSizeBytes=66560
-        FileLogger\Path=/home/megamozg/.local/share/qBittorrent/logs
+        FileLogger\Path=/home/dragora/.local/share/qBittorrent/logs
         GUI\Notifications\TorrentAdded=false
       [BitTorrent]
         Session\MaxActiveDownloads=1
@@ -40,7 +40,7 @@
       [LegalNotice]
         Accepted=true
       [MainWindow]
-        LastDir=/home/megamozg/Downloads
+        LastDir=/home/dragora/Downloads
         geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\0\0\0\ai\0\0\x3\xf5\0\0\0\0\0\0\0\0\0\0\a\x7f\0\0\x4\x37\0\0\0\0\x2\0\0\0\a\x80\0\0\0\0\0\0\0\0\0\0\ai\0\0\x3\xf5)
       [Meta]
         MigrationVersion=6

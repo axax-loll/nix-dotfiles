@@ -11,7 +11,7 @@
 		./micro
 		./git
 		./helix
-		./yazi
-		./joshuto
+		# ./yazi
+		# ./joshuto
 	];
 }
