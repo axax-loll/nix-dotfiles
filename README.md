@@ -26,7 +26,6 @@
   | [kitty](https://github.com/kovidgoyal/kitty) | Терминал, более функциональный, вцелом советую его |
   | [foot](https://codeberg.org/dnkl/foot) | Терминал, простейший пизда, tmux еще не поставил |
   | [fish](https://github.com/fish-shell/fish-shell) | Шелл, планирую переходить на zsh, а также иметь nushell |
-  <!-- | [vivaldi](https://vivaldi.com/ru) | Браузер на хромиуме с фишками | -->
   | [firedragon](https://github.com/dr460nf1r3/firedragon-browser) | Браузер на базе форка фуррифокса - floorp  |
   | [bottles](https://github.com/bottlesdevs/Bottles) | Пускатель виндовых игр |
   | [nemo](https://github.com/linuxmint/nemo) | Файловый менеджер из мяты |
