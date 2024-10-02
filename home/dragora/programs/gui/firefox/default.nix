@@ -1,10 +1,9 @@
 { pkgs, inputs, ... }:
 {
 	imports = [
+		./user
 		./settings.nix
 		./search.nix
-		./userchrome.nix
-		./waterfall.nix
 	];
 	programs.firefox = {
 		enable = true;
@@ -20,6 +19,7 @@
 				sponsorblock
 				darkreader
 				vimium-c
+				newtab-adapter
 				censor-tracker
 
 				# MISC
@@ -41,7 +41,7 @@
 			DisableProfileRefresh = true;
 			PromptForDownloadLocation = false;
 			NetworkPrediction = false;
-			showSearchBar = false;
+			showSearchBar = true;
 			DisableSetDesktopBackground = true;
 			LegacyProfiles = true;
 			ManualAppUpdateOnly = true;

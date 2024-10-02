@@ -4,10 +4,6 @@
 		plugins = with inputs; [
 			# COMMUNITY
 			hyprfocus.packages.${pkgs.system}.default
-
-			# BUILTIN
-			# hyprland-plugins.packages.${pkgs.system}.hyprbars
-			hyprland-plugins.packages.${pkgs.system}.hyprexpo
 		];
 		settings.plugin = {
 			# FOCUS
@@ -32,36 +28,6 @@
 					out_speed = 2;
 				};
 			};
-
-			# EXPO LIKE IDK
-			hyprexpo = {
-				columns = 3;
-				gap_size = 5;
-				bg_col = "rgb(${base00})";
-				workspace_method = "center current";
-
-				enable_gesture = true;
-				gesture_fingers = 3;
-				gesture_distance = 300;
-				gesture_positive = true;
-			};
-
-			# WINDOW TITLES
-			# hyprbars = {
-			# 	bar_height = 20;
-			# 	bar_color = "rgb(${base00})";
-			# 	"col.text" = "rgb(${base06})";
-			# 	bar_text_size = 12;
-			# 	bar_text_font = "JetBrainsMono NerdFont";
-			# 	bar_text_align = "left";
-			# 	bar_buttons_alignment = "left";
-			# 	bar_part_of_window = true;
-			# 	bar_precedence_over_border = true;
-			# 	hyprbars-button = [
-			# 		"rgb(${base08}), 10, 󰖭, hyprctl dispatch killactive"
-			# 		"rgb(${base0C}), 10, , hyprctl dispatch fullscreen 1"
-			# 	];
-			# };
 		};
 	};
 }

@@ -2,7 +2,7 @@
 {
 	imports = [
 		inputs.stylix.homeManagerModules.stylix
-		./themes/base16.nix
+		./themes/paradise.nix
 	];
 	stylix = {
   		enable = true;
@@ -35,15 +35,18 @@
 			nushell.enable = true;
 			hyprland.enable = true;
 			sway.enable = true;
-			waybar = { enable = true; enableCenterBackColors = true; enableLeftBackColors = true; enableRightBackColors = true; };
+			# waybar = { enable = true; enableCenterBackColors = true; enableLeftBackColors = true; enableRightBackColors = true; };
 			foot.enable = true;
 			kitty = { enable = true; variant256Colors = false; };
 			gtk.enable = true;
-			helix.enable = true;
+			kde.enable = true;
+			# helix.enable = true;
+			nixvim.enable = true;
 			yazi.enable = true;
 			fzf.enable = true;
 			bat.enable = true;
 			mako.enable = true;
+			mangohud.enable = true;
 			vesktop.enable = true;
 			qutebrowser.enable = true;
 			firefox = { enable = true; };

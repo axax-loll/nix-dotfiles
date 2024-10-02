@@ -2,11 +2,7 @@
 {
 	wayland.windowManager.hyprland.settings = with config.lib.stylix.colors; {
 		monitor = ", 1920x1080@60, auto, 1";
-		env = [ "SLURP_ARGS, -b ${base00}CC -c ${base00}FF -B ${base0F}CC" ];
-		exec-once = [
-			"mako"
-			"waybar"
-		];
+		env = [ "SLURP_ARGS, -b ${base00}CC -c ${base06}FF -B ${base0F}CC" ];
 
 		# APPERANCE
 		general = {
@@ -15,7 +11,7 @@
 			border_size = 3;
 			layout = "dwindle";
 			allow_tearing = false;
-			"col.active_border" = lib.mkForce "rgb(${base0C}) rgb(${base0B}) 45deg";
+			"col.active_border" = lib.mkForce "rgb(${base01})";
 			"col.inactive_border" = lib.mkForce "rgb(${base01})";
 		};
 		decoration = {
@@ -41,7 +37,7 @@
 			};
 		};
 		group = {
-			"col.border_active" = lib.mkForce "rgb(${base0A}) rgb(${base09}) 45deg";
+			"col.border_active" = lib.mkForce "rgb(${base0C}) rgb(${base0B}) 45deg";
 			"col.border_inactive" = lib.mkForce "rgb(${base01})";
 			groupbar = {
 				gradients = false;

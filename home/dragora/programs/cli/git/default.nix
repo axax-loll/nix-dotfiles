@@ -7,7 +7,7 @@
 		extraConfig = {
 			color.ui = true;
 			init.defaultBranch = "main";
-			safe.directory = "/etc/nixos";
+			safe.directory = "/home/dragora/.flake";
 		};
 	};
 }

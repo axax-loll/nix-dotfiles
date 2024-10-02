@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-	imports = [ ./theme.nix ];
+	imports = [ ./theme.nix ./mime.nix ];
 	programs.joshuto = {
 		enable = true;
 		settings = {
@@ -10,8 +10,8 @@
 			use_trash = true;
 			watch_files = true;
 			xdg_open = true;
-			xdg_open_fork = false;
-			case_insensitive_ext = false;
+			xdg_open_fork = true;
+			# case_insensitive_ext = false;
 			zoxide_update = true;
 			display = {
 				mode = "default";

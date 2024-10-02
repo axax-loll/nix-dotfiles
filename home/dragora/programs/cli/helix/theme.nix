@@ -1,123 +1,96 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
-	programs.helix.themes = {
-		"attribute" = "yellow";
-		"type" = "yellow";
-		"type.enum.variant" = "teal";
-
-		"constructor" = "sapphire";
-
-		"constant" = "peach";
-		"constant.character" = "teal";
-		"constant.character.escape" = "pink";
-
-		"string" = "green";
-		"string.regexp" = "pink";
-		"string.special" = "blue";
-		"string.special.symbol" = "red";
-
-		"comment" = { fg = "overlay2", modifiers = ["italic"] };
-
-		"variable" = "text";
-		"variable.parameter" = { fg = "maroon", modifiers = ["italic"] };
-		"variable.builtin" = "red";
-		"variable.other.member" = "teal";
-
-		"label" = "sapphire"; # used for lifetimes
-
-		"punctuation" = "overlay2";
-		"punctuation.special" = "sky";
-
-		"keyword" = "mauve";
-		"keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] };
-
-		"operator" = "sky";
-
-		"function" = "blue";
-		"function.macro" = "mauve";
-
-		"tag" = "blue";
-
-		"namespace" = { fg = "yellow", modifiers = ["italic"] };
-
-		"special" = "blue"; # fuzzy highlight
-
-		"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] };
-		"markup.heading.1" = "lavender";
-		"markup.heading.2" = "mauve";
-		"markup.heading.3" = "green";
-		"markup.heading.4" = "yellow";
-		"markup.heading.5" = "pink";
-		"markup.heading.6" = "teal";
-		"markup.list" = "mauve";
-		"markup.bold" = { modifiers = ["bold"] };
-		"markup.italic" = { modifiers = ["italic"] };
-		"markup.link.url" = { fg = "blue", modifiers = ["italic", "underlined"] };
-		"markup.link.text" = "blue";
-		"markup.raw" = "flamingo";
-
-		"diff.plus" = "green";
-		"diff.minus" = "red";
-		"diff.delta" = "blue";
-
-		"ui.background" = { fg = "text", bg = "base" };
-
-		"ui.linenr" = { fg = "surface1" };
-		"ui.linenr.selected" = { fg = "lavender" };
-
-		"ui.statusline" = { fg = "subtext1", bg = "mantle" };
-		"ui.statusline.inactive" = { fg = "surface2", bg = "mantle" };
-		"ui.statusline.normal" = { fg = "base", bg = "lavender", modifiers = ["bold"] };
-		"ui.statusline.insert" = { fg = "base", bg = "green", modifiers = ["bold"]  };
-		"ui.statusline.select" = { fg = "base", bg = "flamingo", modifiers = ["bold"]  };
-
-		"ui.popup" = { fg = "text", bg = "surface0" };
-		"ui.window" = { fg = "crust" };
-		"ui.help" = { fg = "overlay2", bg = "surface0" };
-
-		"ui.bufferline" = { fg = "subtext0", bg = "mantle" };
-		"ui.bufferline.active" = { fg = "mauve", bg = "base", underline = { color = "mauve", style = "line" } };
-		"ui.bufferline.background" = { bg = "crust" };
-
-		"ui.text" = "text";
-		"ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] };
-		"ui.text.inactive" = { fg = "overlay1" };
-
-		"ui.virtual" = "overlay0";
-		"ui.virtual.ruler" = { bg = "surface0" };
-		"ui.virtual.indent-guide" = "surface0";
-		"ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" };
-		"ui.virtual.jump-label" = { fg = "rosewater", modifiers = ["bold"] };
-
-		"ui.selection" = { bg = "surface1" };
-
-		"ui.cursor" = { fg = "base", bg = "secondary_cursor" };
-		"ui.cursor.primary" = { fg = "base", bg = "rosewater" };
-		"ui.cursor.match" = { fg = "peach", modifiers = ["bold"] };
-
-		"ui.cursor.primary.normal" = { fg = "base", bg = "lavender" };
-		"ui.cursor.primary.insert" = { fg = "base", bg = "green" };
-		"ui.cursor.primary.select" = { fg = "base", bg = "flamingo" };
-
-		"ui.cursor.normal" = { fg = "base", bg = "secondary_cursor_normal" };
-		"ui.cursor.insert" = { fg = "base", bg = "secondary_cursor_insert" };
-		"ui.cursor.select" = { fg = "base", bg = "secondary_cursor" };
-
-		"ui.cursorline.primary" = { bg = "cursorline" };
-
-		"ui.highlight" = { bg = "surface1", modifiers = ["bold"] };
-
-		"ui.menu" = { fg = "overlay2", bg = "surface0" };
-		"ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] };
-
-		"diagnostic.error" = { underline = { color = "red", style = "curl" } };
-		"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } };
-		"diagnostic.info" = { underline = { color = "sky", style = "curl" } };
-		"diagnostic.hint" = { underline = { color = "teal", style = "curl" } };
-
-		"error" = "red";
-		"warning" = "yellow";
-		"info" = "sky";
-		"hint" = "teal";
+	programs.helix.themes = lib.mkForce {
+		base16 = let
+			base00 = "#151515";
+			base01 = "#1F1F1F";
+			base02 = "#2E2E2E";
+			base03 = "#424242";
+			base04 = "#BBB6B6";
+			base05 = "#E8E3E3";
+			base06 = "#E8E3E3";
+			base07 = "#E8E3E3";
+			base08 = "#B66467";
+			base09 = "#D9BC8C";
+			base0A = "#D9BC8C";
+			base0B = "#8C977D";
+			base0C = "#8AA6A2";
+			base0D = "#8DA3B9";
+			base0E = "#A988B0";
+			base0F = "#BBB6B6";
+		in {
+			"attributes" = base09;
+			"comment" = { fg = base03; modifiers = [ "italic" ]; };
+			"constant" = base09;
+			"constant.character.escape" = base0C;
+			"constant.numeric" = base09;
+			"constructor" = base0D;
+			"debug" = base03;
+			"diagnostic" = { modifiers = [ "underlined" ]; };
+			"diff.delta" = base09;
+			"diff.minus" = base08;
+			"diff.plus" = base0B;
+			"error" = base08;
+			"function" = base0D;
+			"hint" = base03;
+			"info" = base0D;
+			"keyword" = base0E;
+			"label" = base0E;
+			"namespace" = base0E;
+			"operator" = base05;
+			"special" = base0D;
+			"string"  = base0B;
+			"type" = base0A;
+			"variable" = base08;
+			"variable.other.member" = base0B;
+			"warning" = base09;
+			
+			"markup.bold" = { fg = base0A; modifiers = [ "bold" ]; };
+			"markup.heading" = base0D;
+			"markup.italic" = { fg = base0E; modifiers = [ "italic" ]; };
+			"markup.link.text" = base08;
+			"markup.link.url" = { fg = base09; modifiers = [ "underlined" "italic" ]; };
+			"markup.list" = base08;
+			"markup.quote" = base0C;
+			"markup.raw" = base0B;
+			"markup.strikethrough" = { modifiers = [ "crossed_out" ]; };
+			
+			"diagnostic.hint" = { underline = { style = "curl"; }; };
+			"diagnostic.info" = { underline = { style = "curl"; }; };
+			"diagnostic.warning" = { underline = { style = "curl"; }; };
+			"diagnostic.error" = { underline = { style = "curl"; }; };
+			
+			"ui.background" = { bg = base00; };
+			"ui.bufferline.active" = { fg = base00; bg = base03; modifiers = [ "bold" ]; };
+			"ui.bufferline" = { fg = base04; bg = base00; };
+			"ui.cursor" = { fg = base0A; modifiers = [ "reversed" ]; };
+			"ui.cursor.insert" = { fg = base0A; modifiers = [ "reversed" ]; };
+			"ui.cursorline.primary" = { fg = base05; bg = base01; };
+			"ui.cursor.match" = { fg = base0A; modifiers = [ "reversed" ]; };
+			"ui.cursor.select" = { fg = base0A; modifiers = [ "reversed" ]; };
+			"ui.gutter" = { bg = base00; };
+			"ui.help" = { fg = base06; bg = base01; };
+			"ui.linenr" = { fg = base03; bg = base00; };
+			"ui.linenr.selected" = { fg = base04; bg = base01; modifiers = [ "bold" ]; };
+			"ui.menu" = { fg = base05; bg = base01; };
+			"ui.menu.scroll" = { fg = base03; bg = base01; };
+			"ui.menu.selected" = { fg = base01; bg = base04; };
+			"ui.popup" = { bg = base01; };
+			"ui.selection" = { bg = base02; };
+			"ui.selection.primary" = { bg = base02; };
+			"ui.statusline" = { fg = base04; bg = base01; };
+			"ui.statusline.inactive" = { bg = base01; fg = base03; modifiers = [ "bold" ]; };
+			"ui.statusline.insert" = { fg = base00; bg = base0B; modifiers = [ "bold" ]; };
+			"ui.statusline.normal" = { fg = base00; bg = base0D; modifiers = [ "bold" ]; };
+			"ui.statusline.select" = { fg = base00; bg = base0F; modifiers = [ "bold" ]; };
+			"ui.text" = base05;
+			"ui.text.focus" = base05;
+			"ui.virtual.indent-guide" = { fg = base03; };
+			"ui.virtual.wrap" = { fg = base03; };
+			"ui.virtual.inlay-hint" = { fg = base03; };
+			"ui.virtual.ruler" = { bg = base01; };
+			"ui.virtual.jump-label" = { fg = base0A; modifiers = [ "bold" ]; };
+			"ui.window" = { bg = base01; };
+		};
 	};
 }

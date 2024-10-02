@@ -5,6 +5,7 @@
 		icons = true;
 		extraOptions = [
 			"--group-directories-first"
+			"--icons=always"
 		];
 	};
 }

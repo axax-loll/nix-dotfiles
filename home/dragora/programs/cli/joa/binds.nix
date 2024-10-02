@@ -144,7 +144,7 @@
 			  { keys = ["g"; "d"]; commands = ["cd ~/Загрузки"] };
 			  { keys = ["g"; "h"]; commands = ["cd ~/"] };
 			  { keys = ["?"]; commands = ["help"] };
-			]
+			];
 		};
 	};
 }

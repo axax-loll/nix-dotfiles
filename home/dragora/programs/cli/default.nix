@@ -1,14 +1,17 @@
 {
 	imports = [
-		./cli-tools.nix
+		./pkgs.nix
 		
 		./eza
+		./fzf
 		./fastfetch
 		./zoxide
 		./cava
+		./btop
 		./micro
 		./git
 		./helix
+		./yazi
 		./joshuto
 	];
 }

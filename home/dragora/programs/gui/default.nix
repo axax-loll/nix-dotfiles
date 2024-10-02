@@ -1,9 +1,10 @@
 {
 	imports = [
-		# ./spotify
-		./chromium
+		./spotify
+		# ./chromium
 		./firefox
-		# ./anyrun
+		./qbittorrent
+		# `./anyrun
 		./mpv
 	];
 }

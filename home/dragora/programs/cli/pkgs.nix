@@ -1,29 +1,37 @@
-{ pkgs, ... }:
+{ pkgs, yazi, ... }:
 {
 	home.packages = with pkgs; [
-		yazi
-		joshuto
-		
 		bat
+		fzf
 		
-		git
 		cava
 		lutgen
-		openvpn
 		
 		micro
 		helix
-		
+
+		inxi
 		zoxide
 		starship
 		fastfetch
+		cpufetch
 		pulsemixer
 
+		openvpn
+		nix-tree
+		nix-prefetch-github
+		
 		nvtopPackages.amd
 		btop
 
 		bluetuith
 		tenki
-		inxi
-	];
+
+		# trash-cli
+		trashy
+		fuc
+
+		# ferium
+		# portablemc
+		];
 }

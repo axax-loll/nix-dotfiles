@@ -3,12 +3,6 @@ let
 	repo = "https://github.com/axax-loll/fuji-wallpapers/blob/main";
 in
 {
-	programs.firefox.profiles.dragora.userChrome = ''
-		* {
-			font-family: "JetBrainsMono Nerd Font" !important;
-			font-size: 12pt !important; 
-		}
-	'';
 	programs.firefox.profiles.dragora.userContent = ''
 		@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
 			.click-target-container *, .top-sites-list * {
