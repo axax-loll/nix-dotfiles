@@ -4,6 +4,7 @@
 		home-manager
 		
 		vesktop
+		tor-browser
 		qbittorrent-enhanced
 		
 		xdg-user-dirs
@@ -25,7 +26,7 @@
 		swayimg
 		anime4k
 
-		bottles
+		# bottles
 		# "wineWow64Packages.staging"
 		mindustry-wayland
 		mangohud

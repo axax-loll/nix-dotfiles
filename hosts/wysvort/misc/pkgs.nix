@@ -1,6 +1,5 @@
 { config, pkgs, inputs, lib, ... }:
 let
-	repo = "https://github.com/axax-loll/fuji-wallpapers/blob/main";
 	hpkg = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
@@ -12,7 +11,6 @@ in
 		zapret lact
 		hyprland light
 		home-manager
-		greetd.regreet
 
 		adw-gtk3
 	];

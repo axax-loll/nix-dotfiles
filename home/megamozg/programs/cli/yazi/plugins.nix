@@ -14,6 +14,7 @@ in
 		max-preview = "${yazi-plugins}/max-preview.yazi";
 		no-status = "${yazi-plugins}/no-status.yazi";
 		hide-preview = "${yazi-plugins}/hide-preview.yazi";
+		full-border = "${yazi-plugins}/full-border.yazi";
 		glow = pkgs.fetchFromGitHub {
 			owner = "Reledia";
 			repo = "glow.yazi";
@@ -37,6 +38,18 @@ in
 			repo = "fast-enter.yazi";
 			rev = "dd498123cb0696d7fa50b32d2268fb8c2084a4a4";
 			hash = "sha256-jjluqFboFXV4yqBMvW7WhO61Urn2FQ/O31PqlaCxB2c=";
+		};
+		starship = pkgs.fetchFromGitHub {
+			owner = "Rolv-Apneseth";
+			repo = "starship.yazi";
+			rev = "77a65f5a367f833ad5e6687261494044006de9c3";
+			hash = "sha256-sAB0958lLNqqwkpucRsUqLHFV/PJYoJL2lHFtfHDZF8=";
+		};
+		yatline = pkgs.fetchFromGitHub {
+			owner = "imsi32";
+			repo = "yatline.yazi";
+			rev = "7b56434864d6a0b5d547fed2339b99346a018522";
+			hash = "sha256-4qxBAXFyPBQhSU24xL7fzhgM5e8Cq7BigEp4GPxSjD4=";
 		};
 	};
 
