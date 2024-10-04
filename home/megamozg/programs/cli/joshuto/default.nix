@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
-	imports = [ ./theme.nix ./mime.nix ];
+	imports = [
+		./theme.nix
+		./mime.nix
+		./previewer.nix
+	];
 	programs.joshuto = {
 		enable = true;
 		settings = {
@@ -36,6 +40,7 @@
 				max_preview_size = 100000000;
 				use_xdg_thumbs = true;
 				xdg_thumb_size = "xlarge";
+				preview_script = "~/.config/joshuto/preview_file.sh";
 			};
 			tab.home_page = "inherit";
 		};

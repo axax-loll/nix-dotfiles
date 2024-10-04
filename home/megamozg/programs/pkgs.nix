@@ -26,7 +26,7 @@
 		swayimg
 		anime4k
 
-		# bottles
+		bottles
 		# "wineWow64Packages.staging"
 		mindustry-wayland
 		mangohud

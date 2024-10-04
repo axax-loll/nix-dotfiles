@@ -35,6 +35,8 @@
 		# trash-cli
 		trashy
 		fuc
+		zip
+		atool
 
 		# ferium
 		# portablemc

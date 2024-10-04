@@ -5,6 +5,7 @@
     ./theme.nix
     ./lua.nix
     ./plugins.nix
+    ./starship.nix
   ];
   programs.yazi = {
 	  enable = true;
@@ -26,13 +27,13 @@
       };
       opener = {
         edit = [
-	        { run = "hx $@"; block = true; for = "unix"; }
+	        { run = "hx $@"; block = true; }
         ];
         play = [
-	        { run = "mpv $@"; orphan = true; for = "unix"; }
+	        { run = "mpv $@"; orphan = true; }
         ];
         open = [
-	        { run = "xdg-open $@"; desc = "Open"; }
+	        { run = "xdg-open $@"; }
         ];
       };
       open = {
