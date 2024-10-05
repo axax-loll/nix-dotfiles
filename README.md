@@ -23,14 +23,14 @@
 
   | Название | Описание |
   | ------------- | ------------- |
-	| Desktop utilites |
+	| Desktop utilites | Description |
 	| [hyprland](https://github.com/hyprwm/hyprland) | Best window manager |
   | [kitty](https://github.com/kovidgoyal/kitty) | Very good terminal with image preview |
   | [foot](https://codeberg.org/dnkl/foot) | Simplest terminal |
 	| [grimblast](https://github.com/hyprwm/contrib/tree/main/grimblast) | Screenshoter |
   | [nwg-drawer](https://github.com/nwg-piotr/nwg-drawer) | Gnome-like launcher |
   | [waybar](https://github.com/Alexays/Waybar) | Bar for waylands |
-	| CLI utilites |
+	| CLI utilites | Description |
   | [fish](https://github.com/fish-shell/fish-shell) | Just working shell |
   | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | Fetch for be cool rices |
 	| [yazi](https://github.com/sxyazi/yazi) | Rusted file-manager great!!! |
@@ -43,7 +43,7 @@
 	| [nvtop](https://github.com/Syllo/nvtop) | Top for GPU |
 	| [btop](https://github.com/aristocratos/btop) | Very informated top |
   | [doas](https://wiki.archlinux.org/title/Doas) | sudo from bsd systems |
-	| GUI utilites |
+	| GUI utilites| Description |
   | [firefox](https://github.com/mozilla) | Customizable browser |
   | [bottles](https://github.com/bottlesdevs/Bottles) | Wine launcher |
   | [nemo](https://github.com/linuxmint/nemo) | File manager from Cinnamon |
@@ -57,7 +57,7 @@
 	| [mpv](https://github.com/mpv-player/mpv) | Simplest video player |
 	| [anime4k](https://github.com/bloc97/Anime4K) | Anime upscaler |
 	| [swayimg](https://github.com/artemsen/swayimg) | Simple image viewer |
-	| Misc |
+	| Misc | Description |
 	| [nix-tree](https://github.com/utdemir/nix-tree) | Tree for your generations&derivations |
 	| [prefetch-github](https://github.com/seppeljordan/nix-prefetch-github) | Tool for fetching github repo |
 	| [tenki](https://github.com/ckaznable/tenki) | TUI clock with effects |
