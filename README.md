@@ -63,6 +63,7 @@
 	| [tenki](https://github.com/ckaznable/tenki) | TUI clock with effects |
 	| [confetty](https://github.com/maaslalani/confetty) | Confetty and fireworks in terminal |
   | [jetbrains](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono) | Nerded JetBrains |
+
   
   - IDK WHAT ALSO DUDES
 </details>
