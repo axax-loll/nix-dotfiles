@@ -2,8 +2,8 @@
 {
   programs.yazi.initLua =  ''
       require("no-status"):setup()
-      require("starship"):setup()
-      -- require("starship"):setup({ config_file = "/home/megamozg/.config/yazi/star.toml" })
+      -- require("starship"):setup()
+      require("starship"):setup({ config_file = "/home/megamozg/.config/yazi/star.toml" })
 
       -- require("yatline"):setup({
       -- 	section_separator = { open = "", close = "" },
