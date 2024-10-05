@@ -1,10 +1,8 @@
-{ pkgs, ... }:
+{ inputs, ... }:
+let walls = inputs.fuji-wallpapers; in
 {
 	stylix = {
-		image = pkgs.fetchurl {
-			url = "https://github.com/axax-loll/paradise-wallpapers/blob/main/car.jpeg?raw=true";
-			sha256 = "sha256-ptXa7uoCEys209fe6wnvT+k9ueeuOP8Tua/PlujTzas=";
-		};
+		image = "${walls}/desktop/dragon.jpg";
 		base16Scheme = {
 			base00 = "#151515";
 			base01 = "#1F1F1F";

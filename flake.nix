@@ -88,5 +88,11 @@
 			url = "github:pyt0xic/hyprfocus";
 			inputs.hyprland.follows = "hyprland";
 		};
+		azikx-wallpapers = {
+			type = "github";
+			owner = "axax-loll";
+			repo = "nix-wallpapers";
+			flake = false;
+		};
 	};
 }
