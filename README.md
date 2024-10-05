@@ -18,11 +18,10 @@
 </details>
 
 <details>
-  <summary>Софтина</summary>
+  <summary>Software</summary>
 
 
   | Название | Описание |
-  | ------------- | ------------- |
 	| Desktop utilites | Description |
 	| [hyprland](https://github.com/hyprwm/hyprland) | Best window manager |
   | [kitty](https://github.com/kovidgoyal/kitty) | Very good terminal with image preview |
