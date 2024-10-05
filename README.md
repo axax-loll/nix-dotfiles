@@ -63,7 +63,8 @@
   - IDK WHAT ALSO DUDES
 </details>
 
-## ALL MY WALLPAPERS [ТУТ](https://github.com/axax-loll/nix-wallpapers)
+## ALL MY WALLPAPERS [HERE](https://github.com/axax-loll/nix-wallpapers)
+## ALL MY USERSTYLES FOR STYLUS [HERE](https://github.com/axax-loll/userstyles)
 
 ![aye](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/fetch.png?raw=true)
 
