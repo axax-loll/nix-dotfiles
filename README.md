@@ -2,11 +2,6 @@
 	<h1>【 NIXOS DOTS 】</h1>
 </div>
 
-<div align="center">
-	<h2>Flake information</h2>
-	<h3></h3>
-</div>
-
  <details> 
   <summary>Whats in?</summary>
      
