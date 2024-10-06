@@ -1,6 +1,7 @@
 {
 	imports = [
 		./spotify
+		./obs-studio
 		./ayugram
 		./firefox
 		./qbittorrent

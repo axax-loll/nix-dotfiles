@@ -16,7 +16,6 @@
 		nemo-emblems
 		gvfs
 		
-		obs-studio
 		obsidian
 		inkscape
 		
@@ -32,6 +31,14 @@
 		mangohud
 		superTuxKart
 		transmission_4-gtk
+
+		(prismlauncher.override {
+			jdks = [
+				temurin-bin-21
+				temurin-bin-17
+				temurin-bin-8
+			];
+		})
 
 		trayscale
 		
