@@ -6,12 +6,12 @@
 				"appIcon": "chibi2",
 				"channelBottomButton": 0,
 				"collapseSimilarChannels": true,
-				"deletedMark": "удалено",
+				"deletedMark": "deleted",
 				"disableAds": true,
 				"disableCustomBackgrounds": false,
 				"disableNotificationsDelay": false,
 				"disableStories": false,
-				"editedMark": "изменено",
+				"editedMark": "edited",
 				"gifConfirmation": false,
 				"hideAllChatsFolder": true,
 				"hideFromBlocked": false,
@@ -52,5 +52,57 @@
 				"voiceConfirmation": false
 			}
 		'';
-	}
+		".local/share/AyuGramDesktop/tdata/shortcuts-custom.json".text = ''
+			[
+  			{
+			    "command": "quit_telegram",
+			    "keys": "alt+q"
+			  },
+			  {
+			    "command": "folder1",
+			    "keys": "alt+1"
+			  },
+			  {
+			    "command": "folder2",
+			    "keys": "alt+2"
+			  },
+			  {
+			    "command": "folder3",
+			    "keys": "alt+3"
+			  },
+			  {
+			    "command": "show_archive",
+			    "keys": "alt+0"
+			  },
+			  {
+			    "command": "search",
+			    "keys": "alt+/"
+			  },
+			  {
+			    "command": "show_contacts",
+			    "keys": "alt+g"
+			  },
+			  {
+			    "command": "next_chat",
+			    "keys": "alt+j"
+			  },
+			  {
+			    "command": "previous_chat",
+			    "keys": "alt+k"
+			  },
+			  {
+			    "command": "next_folder",
+			    "keys": "alt+l"
+			  },
+			  {
+			    "command": "previous_folder",
+			    "keys": "alt+h"
+			  },
+			  {
+			    "command": "media_playpause",
+			    "keys": "alt+p"
+			  }
+			]
+		'';
+	};
 }

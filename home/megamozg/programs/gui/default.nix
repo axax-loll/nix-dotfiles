@@ -1,11 +1,12 @@
 {
 	imports = [
 		./spotify
-		# ./chromium
+		./ayugram
 		./firefox
 		./qbittorrent
-		# `./anyrun
 		./mpv
 		./swayimg
+
+		./pkgs.nix
 	];
 }
