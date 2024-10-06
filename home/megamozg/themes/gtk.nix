@@ -9,7 +9,8 @@
 		noto-fonts
 		noto-fonts-cjk
 		openmoji-color
-		
+
+		monaspace
 		(nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
 	];
 	gtk = {

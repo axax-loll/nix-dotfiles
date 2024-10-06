@@ -1,5 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
+	description = "EVERYONE NEED YOUR CONFIG";
 	imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 	fileSystems = {
 		"/" = { # ROOT

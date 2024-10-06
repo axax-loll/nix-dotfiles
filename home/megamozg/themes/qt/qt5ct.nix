@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   xdg.configFile = {
     "qt5ct/colors/paradise.conf".text = ''
@@ -33,6 +33,7 @@
         toolbutton_style=4
         underline_shortcut=1
         wheel_scroll_lines=3
+        stylesheets=${pkgs.qt5ct}/share/qt5ct/qss/scrollbar-simple.qss, ${pkgs.qt5ct}/share/qt5ct/qss/sliders-simple.qss, ${pkgs.qt5ct}/share/qt5ct/qss/tooltip-simple.qss, ${pkgs.qt5ct}/share/qt5ct/qss/traynotification-simple.qss
 
       [PaletteEditor]
         geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\0\0\0\0\0\0\0\0\x2v\0\0\x2\x10\0\0\0\0\0\0\0\0\0\0\x2v\0\0\x2\x10\0\0\0\0\x2\0\0\0\a\x80\0\0\0\0\0\0\0\0\0\0\x2v\0\0\x2\x10)

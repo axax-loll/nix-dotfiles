@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:
+{ config, ...}:
 {
 	imports = [ ./binds.nix ./colors.nix ];
 	programs.kitty = with config.lib.stylix.colors; {
@@ -32,6 +32,8 @@
 			mouse_hide_wait = 2;
 			underline_hyperlinks = "always";
 			enable_audio_bell = "no";
+			disable_ligatures = "never";
+			font_features = "+calt +liga +ss01 +ss02 +ss03 +ss04 +ss05 +ss06 +ss07 +ss08 +ss09";
 
 			# clipboard_control = "read-primary read-clipboard";
 

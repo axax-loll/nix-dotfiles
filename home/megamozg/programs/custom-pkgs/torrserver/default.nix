@@ -23,7 +23,8 @@ buildGoModule rec {
   vendorHash = null;
 
   buildPhase = ''
-    ./build-all.sh
+    bash $src/build-all.sh
+    go mod vendor
   '';
 
   doCheck = false;

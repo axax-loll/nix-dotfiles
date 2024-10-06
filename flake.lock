@@ -115,22 +115,6 @@
         "type": "github"
       }
     },
-    "azikx-wallpapers": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1728139153,
-        "narHash": "sha256-udnDqTg/Uy7vwB2RRu8zC9WnSfKNdd1pYxMcDVZTHu8=",
-        "owner": "axax-loll",
-        "repo": "nix-wallpapers",
-        "rev": "5f27d01385caf0ce4202dbde441e0b79b33cafa1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "axax-loll",
-        "repo": "nix-wallpapers",
-        "type": "github"
-      }
-    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -901,6 +885,22 @@
         "type": "github"
       }
     },
+    "nix-wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728202116,
+        "narHash": "sha256-yWH6qAkaCzkuiXuumrOBjOmuzb3LxzgW4RRATubla1k=",
+        "owner": "axax-loll",
+        "repo": "nix-wallpapers",
+        "rev": "3053c38530805c46b2c77ceb7684ded352b5b5aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "axax-loll",
+        "repo": "nix-wallpapers",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1726905744,
@@ -1096,7 +1096,6 @@
         "anyrun": "anyrun",
         "auto-cpufreq": "auto-cpufreq",
         "ayugram-desktop": "ayugram-desktop",
-        "azikx-wallpapers": "azikx-wallpapers",
         "firefox-addons": "firefox-addons",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
@@ -1104,6 +1103,7 @@
         "hyprgrass": "hyprgrass",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
+        "nix-wallpapers": "nix-wallpapers",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable",
