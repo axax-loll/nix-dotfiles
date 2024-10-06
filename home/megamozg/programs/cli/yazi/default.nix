@@ -22,8 +22,11 @@
       };
       preview = {
         wrap = "yes";
+        tab_size = 1;
         image_filter = "lanczos3";
-        image_quality = 85;
+        image_quality = 100;
+        max_height = 1000;
+        max_width = 1000;
       };
       opener = {
         edit = [

@@ -6,5 +6,6 @@
 		./qbittorrent
 		# `./anyrun
 		./mpv
+		./swayimg
 	];
 }
