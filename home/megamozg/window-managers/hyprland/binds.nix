@@ -51,6 +51,9 @@
 
 			"$m, $md, workspace, e+1"
 			"$m, $mu, workspace, e-1"
+
+			"$m, $nx, workspace, e+1"
+			"$m, $pr, workspace, e-1"
 			
 			# PROGRAMS
 			"$m, $rt, exec, kitty -T Terminal"
@@ -87,6 +90,7 @@
 			",   $p, exec, grimblast copysave area $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 			"$s, $p, exec, grimblast copysave output $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
 			"$a, $p, exec, grimblast copysave active $(xdg-user-dir PICTURES)/$(date +'scr_%d-%m-%y|%H:%M:%S.png')"
+			"$a $s, $p, exec, hyprpicker -a"
 		]
 		++ ( builtins.concatLists (builtins.genList (i: let ws = i + 1; in [
 				"$mod, code:1${toString i}, workspace, ${toString ws}"

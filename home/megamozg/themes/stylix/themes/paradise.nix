@@ -1,5 +1,5 @@
 { inputs, ... }:
-let walls = inputs.fuji-wallpapers; in
+let walls = inputs.azikx-wallpapers; in
 {
 	stylix = {
 		image = "${walls}/desktop/dragon.jpg";

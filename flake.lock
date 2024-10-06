@@ -115,6 +115,22 @@
         "type": "github"
       }
     },
+    "azikx-wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728139153,
+        "narHash": "sha256-udnDqTg/Uy7vwB2RRu8zC9WnSfKNdd1pYxMcDVZTHu8=",
+        "owner": "axax-loll",
+        "repo": "nix-wallpapers",
+        "rev": "5f27d01385caf0ce4202dbde441e0b79b33cafa1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "axax-loll",
+        "repo": "nix-wallpapers",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -1080,6 +1096,7 @@
         "anyrun": "anyrun",
         "auto-cpufreq": "auto-cpufreq",
         "ayugram-desktop": "ayugram-desktop",
+        "azikx-wallpapers": "azikx-wallpapers",
         "firefox-addons": "firefox-addons",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",

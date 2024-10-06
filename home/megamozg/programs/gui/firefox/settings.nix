@@ -132,6 +132,8 @@
 		"full-screen-api.transition-duration.leave" = "0 0";
 		"full-screen-api.warning.delay" = -1;
 		"full-screen-api.warning.timeout" = 0;
+		"browser.urlbar.suggest.engines" = false;
+		"browser.urlbar.suggest.searches" = false;
 		"browser.urlbar.suggest.calculator" = true;
 		"browser.urlbar.unitConversion.enabled" = true;
 		"browser.urlbar.trending.featureGate" = false;
@@ -144,6 +146,7 @@
 		"browser.menu.showViewImageInfo" = true;
 		"findbar.highlightAll" = true;
 		"layout.word_select.eat_space_to_next_word" = false;
+		"browser.startup.page" = 1;
 
 		# SMOOTHFOX
 		"general.smoothScroll" = true;
@@ -154,8 +157,9 @@
 		"general.smoothScroll.msdPhysics.slowdownMinDeltaMS" = 25;
 		"general.smoothScroll.msdPhysics.slowdownMinDeltaRatio" = "2";
 		"general.smoothScroll.msdPhysics.slowdownSpringConstant" = 250;
-		"general.smoothScroll.currentVelocityWeighting" = "1";
-		"general.smoothScroll.stopDecelerationWeighting" = "1";
+		"general.smoothScroll.stopDecelerationWeighting" = "0.6";
+		"general.smoothScroll.currentVelocityWeighting" = "0.15";
 		"mousewheel.default.delta_multiplier_y" = 300;
+		"mousewheel.min_line_scroll_amount" = 10;
 	};
 }

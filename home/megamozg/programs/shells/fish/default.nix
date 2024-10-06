@@ -4,7 +4,7 @@
 		shellAliases = {
 			e = "$EDITOR";
 			sudo = "doas";
-			
+
 			cp = "cpz";
 			rm = "rmz";
 			
@@ -25,6 +25,8 @@
 			lsf = "eza --icons=never -f1 --group-directories-first";
 			
 			cat = "bat --theme base16";
+
+			ff = "fastfetch";
 			
 			r = "ranger";
 			y = "yazi";
@@ -52,17 +54,29 @@
 			lut = "lutgen apply -p paradise";
 			lutall = "lutgen apply -p paradise ./*";
 			icat = "kitten icat";
+			
+			btp = "btop";
+			nvt = "nvtop -i";
 
 			ter = "tenki --mode rain --wind disable --timer-color cyan -f 80";
 			tes = "tenki --mode snow --wind disable --timer-color yellow -f 80";
 			tem = "tenki --mode meteor --wind disable --timer-color red -f 80";
+
+			rmr = "trash restore";
+			rmp = "trash put";
+			tre = "trash empty -all";
+
+			nxr = "nix run";
+			nxf = "nix-prefetch-github";
 		};
 		interactiveShellInit = ''
 			set fish_greeting
 			[ "$(tty)" = /dev/tty1 ] && exec Hyprland
 		'';
 	};
-	xdg.configFile."lutgen/paradise".text = ''
-		151515 1F1F1F 2E2E2E 424242 BBB6B6 E8E3E3 E8E3E3 E8E3E3 B66467 D9BC8C D9BC8C 8C977D 8AA6A2 8DA3B9 A988B0 BBB6B6
-	'';
+	xdg.configFile = {
+		"lutgen/paradise".text = ''
+			151515 1F1F1F 2E2E2E 424242 BBB6B6 E8E3E3 E8E3E3 E8E3E3 B66467 D9BC8C D9BC8C 8C977D 8AA6A2 8DA3B9 A988B0 BBB6B6
+		'';
+	};
 }
