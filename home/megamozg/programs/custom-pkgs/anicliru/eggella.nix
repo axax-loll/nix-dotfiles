@@ -1,19 +1,14 @@
-{
-  lib
-, fetchPypi
-, python3Packages
-}:
+{ lib, fetchPypi, python3Packages }:
 
 python3Packages.buildPythonApplication rec{
-
   pname = "eggella";
-  version = "0.1.6";
+  version = "0.1.7";
   pyproject = true;
 
   src = fetchPypi {
     pname = "eggella";
     inherit version;
-    hash = "sha256-2vnfiiS9g8O8k426PYvhiw9NUvKHDunGNeld83hUfYM=";
+    hash = "sha256-8Vo39BePA86wcLKs/F+u2N7tpIpPrEyEPp3POszy050=";
   };
 
   build-system = with python3Packages; [
@@ -29,10 +24,9 @@ python3Packages.buildPythonApplication rec{
 
   meta = with lib; {
     description = "Framework for easy creating REPL applications.";
-    homepage = "https://github.com/vypivshiy/eggella";
-    maintainers = with maintainers; [ DADA30000 ];
+    homepage = "https://github.com/vypivshiy/eggella"; # DEAD
+    maintainers = with maintainers; [ DADA30000 azikx ];
     mainProgram = "eggella";
     platforms = platforms.unix;
   };
-
 }

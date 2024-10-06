@@ -1,12 +1,6 @@
-{
-  lib
-, pkgs 
-, fetchPypi
-, python3Packages
-}:
+{ lib, pkgs , fetchPypi, python3Packages }:
 
 python3Packages.buildPythonApplication rec{
-
   pname = "ani-cli-ru";
   version = "5.0.12";
   pyproject = true;
@@ -30,11 +24,10 @@ python3Packages.buildPythonApplication rec{
 
   meta = with lib; {
     description = "Script to watch anime from terminal with russian translation, written in python.";
-    homepage = "https://github.com/vypivshiy/ani-cli-ru";
+    homepage = "https://github.com/vypivshiy/ani-cli-ru"; # DEAD
     license = with licenses; [ gpl3Plus ];
-    maintainers = with maintainers; [ DADA30000 ];
+    maintainers = with maintainers; [ DADA30000 azikx ];
     mainProgram = "anicli-ru";
     platforms = platforms.unix;
   };
-
 }

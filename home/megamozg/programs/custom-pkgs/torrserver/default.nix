@@ -15,9 +15,9 @@ buildGoModule rec {
   pname = "torrserver";
   version = "121";
   src = fetchFromGitHub {
-    rev = "MatriX.${version}";
     owner = "YouROK";
     repo = "TorrServer";
+    rev = "MatriX.${version}";
     sha256 = "sha256-xFUebXoGSqao7PDGNqk8jfkp64WHlJOBQtp7wsyw5Mc=";
   };
   vendorHash = null;
@@ -32,6 +32,6 @@ buildGoModule rec {
     description = "Torrent stream server";
     homepage = "https://github.com/YouROK/TorrServer";
     license = licenses.gpl3;
-    platforms = platforms.linux ++ platforms.darwin;
+    platforms = platforms.linux;
   };
 }

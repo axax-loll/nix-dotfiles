@@ -1,0 +1,1 @@
+{ imports = [ ./anicli-ru.nix ]; }
