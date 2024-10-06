@@ -24,13 +24,13 @@
         wrap = "yes";
         tab_size = 1;
         image_filter = "lanczos3";
-        image_quality = 100;
+        image_quality = 90;
         max_height = 1000;
         max_width = 1000;
       };
       opener = {
         edit = [
-	        { run = "hx $@"; block = true; }
+          { run = "hx $@"; block = true; }
         ];
         play = [
 	        { run = "mpv $@"; orphan = true; }
@@ -43,6 +43,8 @@
         rules = [
           { mime = "text/*"; use = "edit"; }
           { mime = "video/*"; use = "play"; }
+          { mime = "audio/*"; use = "play"; }
+          { mime = "image/*"; use = "open"; }
         ];
       };
     };

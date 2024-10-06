@@ -11,7 +11,7 @@
       # Window position (parent or absolute coordinates, e.g. 100,200)
       position = parent
       # Window size (fullscreen/parent/image, or absolute size, e.g. 800,600)
-      size = parent
+      size = fullscreen
       # Action performed by SIGUSR1 signal (same format as for key bindings)
       sigusr1 = reload
       # Action performed by SIGUSR2 signal (same format as for key bindings)
@@ -24,7 +24,7 @@
       ################################################################################
       [viewer]
       # Window background color (RGBA)
-      window = #00000000
+      window = #000000ff
       # Background for transparent images (grid/RGBA)
       transparency = grid
       # Default image scale (optimal/fit/width/height/fill/real)
@@ -32,7 +32,7 @@
       # Fix position of the image on the window surface (yes/no)
       fixed = yes
       # Anti-aliasing (yes/no)
-      antialiasing = yes
+      antialiasing = no
       # Run slideshow at startup (yes/no)
       slideshow = no
       # Slideshow image display time (seconds)
@@ -53,17 +53,17 @@
       # Fill the entire tile with thumbnail (yes/no)
       fill = yes
       # Use anti-aliasing for thumbnails (yes/no)
-      antialiasing = no
+      antialiasing = yes
       # Background color of the window (RGBA)
-      window = #${base00}00
+      window = #${base00}ff
       # Background color of the tile (RGBA)
-      background = #${base01}00
+      background = #${base01}ff
       # Background color of the selected tile (RGBA)
       select = #${base02}ff
       # Border color of the selected tile (RGBA)
       border = #${base0E}ff
       # Shadow color of the selected tile (RGBA)
-      shadow = #${base00}ff
+      shadow = #${base00}a0
       
       ################################################################################
       # Image list configuration
@@ -96,7 +96,7 @@
       ################################################################################
       [info]
       # Show on startup (yes/no)
-      show = no
+      show = yes
       # Timeout to hide info (seconds, 0 to always show)
       info_timeout = 5
       # Timeout to hide status message (seconds)
@@ -104,17 +104,17 @@
       
       # Display scheme for viewer mode (position = content)
       [info.viewer]
-      top_left = +name,+format,+filesize,+imagesize,+exif
+      top_left = none
       top_right = index
-      bottom_left = scale,frame
-      bottom_right = status
+      bottom_left = none
+      bottom_right = none
       
       # Display scheme for gallery mode (position = content)
       [info.gallery]
       top_left = none
-      top_right = none
+      top_right = index
       bottom_left = none
-      bottom_right = name,status
+      bottom_right = none
       
       ################################################################################
       # Viewer mode key binding configuration: key = action [parameters]
@@ -122,9 +122,9 @@
       [keys.viewer]
       F1 = help
       Home = first_file
-      gg = first_file
+      g = first_file
       End = last_file
-      G = last_file
+      Shift+g = last_file
       Prior = prev_file
       Next = next_file
       h = zoom +10
@@ -183,10 +183,10 @@
       F1 = help
       
       Home = first_file
-      gg = first_file
+      g = first_file
       
       End = last_file
-      G = last_file
+      Shift+g = last_file
       
       Left = step_left
       Right = step_right
@@ -194,7 +194,7 @@
       Down = step_down
       
       h = step_left
-      j = step_dowm
+      j = step_down
       k = step_up
       l = step_right
       Prior = page_up
