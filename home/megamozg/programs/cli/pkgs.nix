@@ -38,6 +38,14 @@
 		zip
 		atool
 
+		ffmpegthumbnailer
+		p7zip
+		jq
+		poppler_min
+		imagemagick
+		glow
+		ouch
+		
 		# ferium
 		# portablemc
 		];

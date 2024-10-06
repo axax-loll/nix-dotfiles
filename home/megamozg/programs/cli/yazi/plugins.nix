@@ -10,11 +10,20 @@ in
 {
 	# PLUGINS FROM REPO
 	programs.yazi.plugins = {
+		# BUILTINED
 		chmod = "${yazi-plugins}/chmod.yazi";
 		max-preview = "${yazi-plugins}/max-preview.yazi";
 		no-status = "${yazi-plugins}/no-status.yazi";
 		hide-preview = "${yazi-plugins}/hide-preview.yazi";
 		full-border = "${yazi-plugins}/full-border.yazi";
+
+		# FETCHED
+		ouch = pkgs.fetchFromGitHub {
+    	owner = "ndtoan96";
+    	repo = "ouch.yazi";
+    	rev = "251da6930ca8b7ee0384810086c3bf644caede3e";
+    	hash = "sha256-yLt9aY6hUIOdBI5bMdCs7VYFJGyD3WIkmPxvWKNCskA=";
+		};
 		glow = pkgs.fetchFromGitHub {
 			owner = "Reledia";
 			repo = "glow.yazi";
