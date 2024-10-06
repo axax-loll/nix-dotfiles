@@ -2,7 +2,7 @@
 {
 	imports = [
 		inputs.stylix.homeManagerModules.stylix
-		./themes/paradise.nix
+		./paradise.nix
 	];
 	stylix = {
   		enable = true;

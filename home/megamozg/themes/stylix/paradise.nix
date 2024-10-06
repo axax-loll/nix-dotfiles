@@ -2,7 +2,7 @@
 let walls = inputs.azikx-wallpapers; in
 {
 	stylix = {
-		image = "${walls}/desktop/dragon.jpg";
+		image = "${walls}/desktop/cassette.jpg";
 		base16Scheme = {
 			base00 = "#151515";
 			base01 = "#1F1F1F";
