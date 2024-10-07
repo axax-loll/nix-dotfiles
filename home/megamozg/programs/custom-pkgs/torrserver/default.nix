@@ -1,10 +1,10 @@
 { lib, stdenv, fetchurl, autoPatchelfHook }:
 let
 	version = "134";
-	hash = "sha256-rwVwteYBlqF4WhLn9I/Hy3tXRbC7mHDKL+btkN3YC0Y=";
+	hash = "sha256-WDygG9aGnD20nGxtG0t+T2KEwbJ+fZ0uRaCndirrsXI=";
 in
 stdenv.mkDerivation {
-	name = "ytdlp";
+	name = "torrserver";
 	dontUnpack = true;
 
 	src = fetchurl {
