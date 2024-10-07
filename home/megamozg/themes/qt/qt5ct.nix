@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  xdg.configFile = {
+  xdg.configFile = with config.lib.stylix.colors; {
     "qt5ct/colors/paradise.conf".text = ''
 	  [ColorScheme]
-	    active_colors=#ffe8e3e3, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ffbbb6b6, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
+	    active_colors=#ff${base06}, #ff${base01}, #ff${base01}, #ff${base00}, #ff${base03}, #ff${base0C}, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ffbbb6b6, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
 	    disabled_colors=#ff808080, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ff808080, #ffe8e3e3, #ff808080, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ff808080, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
 	    inactive_colors=#ffe8e3e3, #ff1f1f1f, #ff1f1f1f, #ff151515, #ff424242, #ff6e738d, #ffe8e3e3, #ffe8e3e3, #ffe8e3e3, #ff151515, #ff1f1f1f, #ff151515, #ff2e2e2e, #ffbbb6b6, #ff8c977d, #ffed8796, #ff151515, #ffe8e3e3, #ff181926, #ffe8e3e3, #80151515
     '';
