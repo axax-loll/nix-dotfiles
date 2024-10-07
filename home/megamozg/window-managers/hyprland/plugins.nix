@@ -2,11 +2,7 @@
 {
 	wayland.windowManager.hyprland = with config.lib.stylix.colors; {
 		plugins = with inputs; [
-			# COMMUNITY
 			hyprfocus.packages.${pkgs.system}.default
-
-			# BUILTIN
-			# hyprland-plugins.packages.${pkgs.system}.hyprbars
 			hyprland-plugins.packages.${pkgs.system}.hyprexpo
 		];
 		settings.plugin = {
@@ -15,7 +11,7 @@
 				enabled = "yes";
 				animate_floating = "yes";
 				animate_workspacechange = "yes";
-				focus_animation = "shrink";
+				focus_animation = "focus";
 				bezier = [
 					"bezIn, 0.5,0.0,1.0,0.5"
 					"bezOut, 0.0,0.5,0.5,1.0"
@@ -24,6 +20,13 @@
 					"smoothIn, 0.25, 1, 0.5, 1"
 					"realsmooth, 0.28,0.29,.69,1.08"
 				];
+				flash = {
+            flash_opacity = 0.95;
+            in_bezier = "realsmooth";
+            in_speed = 0.5;
+            out_bezier = "realsmooth";
+            out_speed = 3;
+        };
 				shrink = {
 					shrink_percentage = 0.95;
 					in_bezier = "realsmooth";

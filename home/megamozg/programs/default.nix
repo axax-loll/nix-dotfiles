@@ -5,7 +5,5 @@
 		./misc
 		./cli
 		./gui
-
-		./pkgs.nix
 	];
 }
