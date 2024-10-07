@@ -1,13 +1,8 @@
-{ pkgs, ... }:
-let
-	repo = "https://github.com/axax-loll/nix-wallpapers/blob/main";
-in
+{ inputs, ... }:
+let walls = inputs.nix-wallpapers; in
 {
 	stylix = {
-		image = pkgs.fetchurl {
-			url = "${repo}/bridge.jpg?raw=true";
-			sha256 = "sha256-D3eC61n2h0UPzy+zI3y08BA9mAmbJIBWB8Jq+yKXE5M=";
-		};
+		image = "${walls}/desktop/tokyo3.png";
 		base16Scheme = {
 			base00 = "#151515";
 			base01 = "#1F1F1F";

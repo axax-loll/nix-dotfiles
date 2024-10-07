@@ -17,10 +17,11 @@
 				name = "JetBrainsMono NerdFont";
 				package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
 			};
+			sansSerif = config.stylix.fonts.serif;
 			monospace = config.stylix.fonts.serif;
 			emoji = {
-				name = "OpenMoji Color";
-				package = pkgs.openmoji-color;
+				name = "Noto Color Emoji";
+				package = pkgs.noto-fonts-emoji;
 			};
 			sizes = {
 				desktop = 10;
