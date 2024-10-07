@@ -3,7 +3,7 @@
 </div>
 
 <details>
-  <summary>Software</summary>
+  <summary>🚀 Software</summary>
 
 
   | Name | Desciption |
@@ -55,13 +55,17 @@
 
 ## [WALLPAPERS](https://github.com/axax-loll/nix-wallpapers) & [USERSTYLES](https://github.com/axax-loll/userstyles)
 
-![aye](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/fetch.png?raw=true)
+<details>
+  <summary>🖥️ Outlook/screenshots</summary>
+	<details>
+		<summary>Thinkpad</summary>
+		![aye](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/fetch.png?raw=true)
+		![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/furryfox.png?raw=true)
+		![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/top.png?raw=true)
+		![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/yazi.png?raw=true)
+	</details>
+</details>
 
-![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/furryfox.png?raw=true)
-
-![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/top.png?raw=true)
-
-![ауе](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/yazi.png?raw=true)
 
 #### ENGLISH OR SPANISH??? WHOEVER MOVES IS GAY)))))))
 #### THANKS FOR [hezaki](https://codeberg.org/Hezaki/Touka/), HONORED BROTHER, FOR THE EMPEROR

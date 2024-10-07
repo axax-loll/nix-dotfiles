@@ -5,6 +5,7 @@
     ./theme.nix
     ./lua.nix
     ./plugins.nix
+    ./starship.nix
   ];
   programs.yazi = {
 	  enable = true;
@@ -21,24 +22,41 @@
       };
       preview = {
         wrap = "yes";
+        tab_size = 1;
         image_filter = "lanczos3";
-        image_quality = 85;
+        image_quality = 90;
+        max_height = 1000;
+        max_width = 1000;
       };
       opener = {
         edit = [
-	        { run = "hx $@"; block = true; for = "unix"; }
+          { run = "hx $@"; block = true; }
         ];
         play = [
-	        { run = "mpv $@"; orphan = true; for = "unix"; }
+	        { run = "mpv $@"; orphan = true; }
         ];
         open = [
-	        { run = "xdg-open $@"; desc = "Open"; }
+	        { run = "xdg-open $@"; }
         ];
       };
       open = {
         rules = [
           { mime = "text/*"; use = "edit"; }
           { mime = "video/*"; use = "play"; }
+          { mime = "audio/*"; use = "play"; }
+          { mime = "image/*"; use = "open"; }
+        ];
+      };
+      plugin = {
+		    prepend_previewers = [
+			    { mime = "application/*zip"; run = "ouch"; }
+			    { mime = "application/x-tar"; run = "ouch"; }
+			    { mime = "application/x-bzip2"; run = "ouch"; }
+			    { mime = "application/x-7z-compressed"; run = "ouch"; }
+			    { mime = "application/x-rar"; run = "ouch"; }
+			    { mime = "application/x-xz"; run = "ouch"; }
+
+          { name = "*.md"; run = "glow"; }
         ];
       };
     };

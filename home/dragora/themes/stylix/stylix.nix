@@ -2,7 +2,7 @@
 {
 	imports = [
 		inputs.stylix.homeManagerModules.stylix
-		./themes/paradise.nix
+		./paradise.nix
 	];
 	stylix = {
   		enable = true;
@@ -20,7 +20,7 @@
 			monospace = config.stylix.fonts.serif;
 			emoji = {
 				name = "OpenMoji Color";
-				package = pkgs.noto-fonts-emoji;
+				package = pkgs.openmoji-color;
 			};
 			sizes = {
 				desktop = 10;
