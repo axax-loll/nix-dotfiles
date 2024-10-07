@@ -1,5 +1,5 @@
 <div align="center">
-	<h1>【 NIXOS DOTS 】</h1>
+	<h1>❄️【 NIXOS DOTFILES 】❄️</h1>
 </div>
 
  <details> 
