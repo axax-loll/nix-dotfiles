@@ -1,38 +1,30 @@
-{ 
-  stdenv
-, lib
-, go
-, pkgs
-, buildGoModule
-, fetchYarnDeps
-, mkYarnPackage
-, fetchFromGitHub
-, fetchurl
-, nixosTests
-}:
+{ lib, stdenv, fetchurl, autoPatchelfHook }:
+let
+	version = "134";
+	hash = "sha256-rwVwteYBlqF4WhLn9I/Hy3tXRbC7mHDKL+btkN3YC0Y=";
+in
+stdenv.mkDerivation {
+	name = "ytdlp";
+	dontUnpack = true;
 
-buildGoModule rec {
-  pname = "torrserver";
-  version = "121";
-  src = fetchFromGitHub {
-    owner = "YouROK";
-    repo = "TorrServer";
-    rev = "MatriX.${version}";
-    sha256 = "sha256-xFUebXoGSqao7PDGNqk8jfkp64WHlJOBQtp7wsyw5Mc=";
-  };
-  vendorHash = null;
+	src = fetchurl {
+		url = "https://github.com/YouROK/TorrServer/releases/download/MatriX.${version}/TorrServer-linux-amd64";
+		sha256 = "${hash}";
+	};
 
-  buildPhase = ''
-    bash $src/build-all.sh
-    go mod vendor
-  '';
+	nativeBuildInputs = [ autoPatchelfHook ];
 
-  doCheck = false;
+	installPhase = ''
+		mkdir -p $out/bin
+		cp $src $out/bin/torrserver
+		chmod +x $out/bin/torrserver
+	'';
 
-  meta = with lib; {
-    description = "Torrent stream server";
-    homepage = "https://github.com/YouROK/TorrServer";
-    license = licenses.gpl3;
-    platforms = platforms.linux;
-  };
+	meta = with lib; {
+		description    = "Torrserver";
+		homepage       = "https://github.com/yt-dlp/yt-dlp";
+		license        = licenses.unlicense;
+		meta.platforms = platforms.all;
+		mainProgram    = "torrserver";
+	};
 }
