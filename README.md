@@ -2,16 +2,6 @@
 	<h1>❄️【 NIXOS DOTFILES 】❄️</h1>
 </div>
 
- <details> 
-  <summary>Whats in?</summary>
-     
-  - **Paradise**: using cool colorscheme [paradise](https://github.com/paradise-theme/paradise)
-  - **Two configurations**: i using two machines: PC and Thinkpad
-  - **Hyprland is GOAT**: cool and many-feature wm [hyprland](https://github.com/hyprwm/Hyprland)
-  - **ANIMATIONS!11!!**: animations is cool))))
-  - **WIP**: it isnt finally version
-</details>
-
 <details>
   <summary>Software</summary>
 
@@ -63,8 +53,7 @@
   - IDK WHAT ALSO DUDES
 </details>
 
-## ALL MY WALLPAPERS [HERE](https://github.com/axax-loll/nix-wallpapers)
-## ALL MY USERSTYLES FOR STYLUS [HERE](https://github.com/axax-loll/userstyles)
+## [WALLPAPERS](https://github.com/axax-loll/nix-wallpapers) & [USERSTYLES](https://github.com/axax-loll/userstyles)
 
 ![aye](https://github.com/axax-loll/nix-wallpapers/blob/main/dotfiles/fetch.png?raw=true)
 
