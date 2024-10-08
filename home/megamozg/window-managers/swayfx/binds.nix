@@ -93,20 +93,20 @@ in
 			"${m}+${s}+0" = "${mv} ${cn} to ${ws} ${nm} 10";
 
 			# ARROWS
-      "${m}+${r}" = "move workspace to output right";
-      "${m}+${d}" = "move workspace to output down";
-      "${m}+${u}" = "move workspace to output up";
-      "${m}+${l}" = "move workspace to output left";
+   #    "${m}+${r}" = "move workspace to output right";
+   #    "${m}+${d}" = "move workspace to output down";
+   #    "${m}+${u}" = "move workspace to output up";
+   #    "${m}+${l}" = "move workspace to output left";
 
-      "${m}+${s}+${r}" = "move right";
-    	"${m}+${s}+${d}" = "move down";
-      "${m}+${s}+${u}" = "move up";
-			"${m}+${s}+${l}" = "move left";
+   #    "${m}+${s}+${r}" = "move right";
+   #  	"${m}+${s}+${d}" = "move down";
+   #    "${m}+${s}+${u}" = "move up";
+			# "${m}+${s}+${l}" = "move left";
 
-      "${m}+${a}+${r}" = "focus right";
-    	"${m}+${a}+${d}" = "focus down";
-      "${m}+${a}+${u}" = "focus up";
-			"${m}+${a}+${l}" = "focus left";
+   #    "${m}+${a}+${r}" = "focus right";
+   #  	"${m}+${a}+${d}" = "focus down";
+   #    "${m}+${a}+${u}" = "focus up";
+			# "${m}+${a}+${l}" = "focus left";
 
 			# HJKL
       "${m}+h" = "move workspace to output left";

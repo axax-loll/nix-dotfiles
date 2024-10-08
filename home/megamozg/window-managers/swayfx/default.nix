@@ -6,6 +6,6 @@
 		xwayland = true;
 		systemd.enable = true;
 
-		package = pkgs.swayfx;
+		# package = pkgs.swayfx;
 	};
 }

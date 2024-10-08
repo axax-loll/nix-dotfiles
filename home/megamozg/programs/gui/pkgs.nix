@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }: 
+{ pkgs, inputs, config, ... }: 
 {
+	imports = [
+		inputs.nur.hmModules.nur
+	];
 	home.packages = with pkgs; [
 		home-manager
 		
@@ -32,6 +35,10 @@
 		superTuxKart
 		transmission_4-gtk
 
+		# (vivaldi.override {
+		# 	isSnapshot = true;
+		# })
+
 		(prismlauncher.override {
 			jdks = [
 				temurin-bin-21
@@ -48,7 +55,8 @@
 				"JetBrainsMono"
 			];
 		})
-
+		
+		config.nur.repos.abszero.palgen
 	 	inputs.ayugram-desktop.packages.${pkgs.system}.default
 	];
 }
